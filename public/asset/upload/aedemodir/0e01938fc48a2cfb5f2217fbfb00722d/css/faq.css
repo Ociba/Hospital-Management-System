@@ -1,0 +1,174 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* faq_main ****************/
+#faq_main{ 
+ background-image: url(../img/82.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.faq_inner{ 
+ padding-top:120px;
+ padding-bottom:120px;
+ background-color: #000000ab;
+}
+.faq_main_1{ 
+ text-align:center;
+}
+.faq_main_1 h1{ 
+ color:#fff;
+}
+.faq_main_1 h3{ 
+ margin-top:0px;
+ color:#fff;
+}
+.faq_main_1 ul{ 
+ padding-top:10px;
+}
+.faq_main_1 li{ 
+ display:inline;
+ padding-right:5px;
+ color: #fff;
+}
+.faq_main_1 li a{ 
+ color: #ef7141;
+}
+/********************* faq_main_end ****************/
+/********************* faq ****************/
+#faq{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ }
+.faq_2{ 
+ text-align:center;
+ }
+.faq_2 i{ 
+ font-size:60px;
+ color: #ef7141;
+ }
+#faq .ziehharmonika h3 {
+ background: #c04747;
+ color: #fff;
+ text-align: left;
+ border-radius: 4px;
+ padding: 14px 12px;
+ cursor: pointer;
+ margin-top: 0;
+ margin-bottom: 9px;
+ padding-right: 40px;
+ transition: 0.25s all;
+ position: relative;
+ padding-top: 11px;
+ padding-bottom: 15px;
+ font-size: 21px;
+ font-weight: 100;
+}
+#faq .ziehharmonika h3.active {
+ margin-bottom: 21px;
+ background: #ef7141;
+}
+#faq .ziehharmonika h3::before {
+ content: attr(data-prefix);
+ font-size:0px;
+ margin-right: 9px;
+}
+#faq .ziehharmonika h3.alignLeft {
+ padding-left: 35px;
+}
+#faq .ziehharmonika > div {
+ display: none;
+ background: #fff;
+ border-radius: 4px;
+ border: 1px solid #cdcdcd;
+ text-align: left;
+ padding: 31px 33px;
+ margin-bottom: 9px;
+}
+#faq .ziehharmonika .arrowDown {
+ width: 0;
+ height: 0;
+ border-style: solid;
+ border-width: 13.0px 7.5px 0 7.5px;
+ border-color: #272e35 transparent transparent transparent;
+ position: absolute;
+ bottom: 0;
+ left: 40px;
+ transition: 0.25s all;
+ opacity: 0;
+}
+#faq .ziehharmonika .active .arrowDown {
+ bottom: -13px;
+ border-color: #ef7141 transparent transparent transparent;
+ opacity: 1;
+}
+#faq .ziehharmonika .collapseIcon {
+ position: absolute;
+ right: 20px;
+ top: 45%;
+ font-size: 25px;
+ font-weight: 300;
+ -ms-transform: translate(0, -50%);
+ transform: translate(0, -50%);
+}
+#faq .ziehharmonika .collapseIcon.alignLeft {
+ right: initial;
+ left: 20px;
+}
+.faq_3{ 
+ padding-top:60px;
+ }
+.faq_5 p{ 
+ padding-bottom:15px;
+ }
+.faq_1{ 
+ border-bottom: 1px solid #d0cfcf;
+ padding-bottom: 40px;
+ }
+/********************* faq_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.faq_inner {
+ padding-top: 50px;
+ padding-bottom: 60px;
+}
+#faq {
+ text-align: center;
+}
+.faq_2 {
+ padding-bottom: 15px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.faq_2 h2{ 
+ font-size: 24px;
+}
+.faq_5 h2{ 
+ font-size:34px;
+}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+.faq_2 h2{ 
+ font-size: 24px;
+}
+.faq_5 h2{ 
+ font-size:34px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+
+}

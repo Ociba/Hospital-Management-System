@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/switchlanguage",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SwitchLanguage\\": "",
+            "Modules\\SwitchLanguage\\App\\": "app/",
+            "Modules\\SwitchLanguage\\Database\\Factories\\": "database/factories/",
+            "Modules\\SwitchLanguage\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\SwitchLanguage\\Tests\\": "tests/"
+        }
+    }
+}

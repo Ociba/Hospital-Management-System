@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/consultationroom",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ConsultationRoom\\": "",
+            "Modules\\ConsultationRoom\\App\\": "app/",
+            "Modules\\ConsultationRoom\\Database\\Factories\\": "database/factories/",
+            "Modules\\ConsultationRoom\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\ConsultationRoom\\Tests\\": "tests/"
+        }
+    }
+}

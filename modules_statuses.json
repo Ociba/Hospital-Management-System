@@ -1,0 +1,19 @@
+{
+    "CropModule": true,
+    "Registration": true,
+    "Patient": true,
+    "Appointment": true,
+    "Staff": true,
+    "Admin": true,
+    "Prescription": true,
+    "Payment": true,
+    "Description": true,
+    "Department": true,
+    "Laboratory": true,
+    "Accounts": true,
+    "Setup": true,
+    "SwitchLanguage": true,
+    "Drugs": true,
+    "ConsultationRoom": true,
+    "Treatment": true
+}

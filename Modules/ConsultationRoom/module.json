@@ -1,0 +1,11 @@
+{
+    "name": "ConsultationRoom",
+    "alias": "consultationroom",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ConsultationRoom\\App\\Providers\\ConsultationRoomServiceProvider"
+    ],
+    "files": []
+}

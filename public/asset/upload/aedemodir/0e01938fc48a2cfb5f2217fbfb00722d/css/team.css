@@ -1,0 +1,155 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* team_main ****************/
+#team_main{ 
+ background-image: url(../img/84.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.team_inner{ 
+ padding-top:120px;
+ padding-bottom:120px;
+ background-color: #000000ab;
+}
+.team_main_1{ 
+ text-align:center;
+}
+.team_main_1 h1{ 
+ color:#fff;
+}
+.team_main_1 h3{ 
+ margin-top:0px;
+ color:#fff;
+}
+.team_main_1 ul{ 
+ padding-top:10px;
+}
+.team_main_1 li{ 
+ display:inline;
+ padding-right:5px;
+ color: #fff;
+}
+.team_main_1 li a{ 
+ color: #ef7141;
+}
+/********************* team_main_end ****************/
+/********************* team ****************/
+#team{ 
+ padding-top:0px;
+ padding-bottom: 30px;
+ }
+.team_1{ 
+ text-align:center;
+ }
+.team_1 h2{ 
+ padding-bottom:15px;
+ }
+.team_2{ 
+ text-align:center;
+ }
+.team_2 p{ 
+ padding-top:12px;
+ padding-bottom:20px;
+ }
+.team_3{ 
+ text-align:center;
+ }
+.team_5{ 
+ background-color: #c04747;
+ padding:0px 10px 10px 10px;
+ }
+.team_5 h4 a{ 
+ color: #fbffff;
+ font-weight: bold;
+ }
+.team_5 p{ 
+ padding: 0px;
+ margin: 0px;
+ padding-bottom:0px;
+ color:#fff;
+ }
+.team_6{ 
+ background-color: #c04747;
+ width: 70%;
+ margin: auto;
+ padding-bottom: 15px;
+ }
+.team_6 li{  
+ display:inline;
+ padding-right:12px;
+ }
+.team_6 li a{  
+ color:#fff;
+ }
+.team_6 li a:hover{  
+ color:#000;
+ }
+.team_6 p{  
+ color:#fff;
+ padding-top:5px;
+ }
+.team_1 h2 a{ 
+ color:#CC935C;
+ }
+.team_main{ 
+ padding-top: 30px;
+ padding-bottom: 50px;
+ }
+.team_main_1{ 
+ padding-bottom:10px;
+ }
+/********************* team_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.team_inner {
+ padding-top: 50px;
+ padding-bottom: 60px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.team_4 img{
+ width:100% 	
+}
+.team_5 p {
+ font-size: 13px;
+}
+.team_6 {
+ width: 90%;
+}
+.team_6 p {
+ font-size: 15px;
+}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+.team_4 img{
+ width:100% 	
+}
+.team_5 p {
+ font-size: 13px;
+}
+.team_6 {
+ width: 90%;
+}
+.team_6 p {
+ font-size: 15px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+
+}

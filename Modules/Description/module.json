@@ -1,0 +1,11 @@
+{
+    "name": "Description",
+    "alias": "description",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Description\\App\\Providers\\DescriptionServiceProvider"
+    ],
+    "files": []
+}

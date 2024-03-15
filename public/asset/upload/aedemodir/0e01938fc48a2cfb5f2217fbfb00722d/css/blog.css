@@ -1,0 +1,142 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* blog_main ****************/
+#blog_main{ 
+ background-image: url(../img/56.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.blog_inner{ 
+ padding-top:120px;
+ padding-bottom:120px;
+ background-color: #000000ab;
+}
+.blog_main_1{ 
+ text-align:center;
+}
+.blog_main_1 h1{ 
+ color:#fff;
+}
+.blog_main_1 h3{ 
+ margin-top:0px;
+ color:#fff;
+}
+.blog_main_1 ul{ 
+ padding-top:10px;
+}
+.blog_main_1 li{ 
+ display:inline;
+ padding-right:5px;
+ color: #fff;
+}
+.blog_main_1 li a{ 
+ color: #ef7141;
+}
+/********************* blog_main_end ****************/
+/********************* blog ****************/
+#blog{ 
+ padding-top:30px;
+ padding-bottom:30px;
+}
+.blog_1 ul{ 
+ padding-top:10px;
+}
+.blog_1 li{ 
+ display:inline;
+ color:#999;
+ margin-right:6px;
+ font-size:13px;
+}
+.blog_1 li a{ 
+ color: #ef7141;
+ font-size: 13px;
+}
+.blog_1{ 
+ box-shadow: 0 0 1px #6f6e6e;
+ padding: 15px;
+ margin-bottom:20px;
+ }
+.blog_4 ul{ 
+ padding-top:10px;
+}
+.blog_4 li{ 
+ display:inline;
+ color:#999;
+ margin-right:6px;
+ font-size:13px;
+}
+.blog_4 li a{ 
+ color: #ef7141;
+ font-size: 13px;
+}
+.blog_2{ 
+ box-shadow: 0 0 1px #6f6e6e;
+ padding: 15px;
+ margin-bottom:20px;
+ }
+.blog_5 ul {
+ text-align: center;
+ padding-top: 20px;
+ padding-bottom: 10px;
+}
+.well_7 {
+ border: 2px solid #ef7141;
+ padding: 8px 15px 8px 15px;
+ text-align: center;
+}
+.blog_5 li {
+ display: inline;
+ margin-right: 10px;
+}
+.blog_5 li a {
+ border: 2px solid #ebe9eb;
+ padding: 8px 15px 8px 15px;
+ text-align: center;
+ background: #ebe9eb;
+ color: #000;
+}
+.blog_5 li a:hover{ 
+ border: 2px solid #f07241;
+ background-color: #f07241;
+ color: #fff;
+}
+/********************* blog_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.blog_inner {
+ padding-top: 40px;
+ padding-bottom: 50px;
+}
+#blog {
+ text-align: center;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+
+
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+
+}
+
+
+

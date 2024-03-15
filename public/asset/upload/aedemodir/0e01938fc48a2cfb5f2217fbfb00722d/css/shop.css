@@ -1,0 +1,277 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* shop_main ****************/
+#shop_main{ 
+ background-image: url(../img/28.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.shop_inner{ 
+ padding-top:120px;
+ padding-bottom:120px;
+ background-color: #000000ab;
+}
+.shop_main_1{ 
+ text-align:center;
+}
+.shop_main_1 h1{ 
+ color:#fff;
+}
+.shop_main_1 h3{ 
+ margin-top:0px;
+ color:#fff;
+}
+.shop_main_1 ul{ 
+ padding-top:10px;
+}
+.shop_main_1 li{ 
+ display:inline;
+ padding-right:5px;
+ color: #fff;
+}
+.shop_main_1 li a{ 
+ color: #ef7141;
+}
+/********************* shop_main_end ****************/
+/********************* shop ****************/
+#shop{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ }
+.shop_2{ 
+ text-align: center;
+ box-shadow: 0 0 3px black;
+ padding: 10px;
+ margin-bottom:10px;
+ }
+.shop_2 h3{
+ padding-bottom:5px;
+ padding-top: 4px;
+ margin-top: 0px;
+}
+.shop_2 h3 a{
+ color:#000;
+ font-weight:100;
+}
+.shop_2 h3 a:hover{
+ color: #ef7141;
+}
+.well_4 {
+ text-decoration: line-through;
+}
+.shop_2 li {
+ display: inline;
+ margin-right: 10px;
+}
+.well_5 {
+ color: #000;
+ font-weight: bold;
+ font-size: 20px;
+}
+.shop_3 ul{ 
+ text-align:center;
+ padding-top:20px;
+  padding-bottom:10px;
+ }
+.shop_3 li{ 
+ display:inline;
+ margin-right:10px;
+ }
+.well_6{ 
+ border: 2px solid #ef7141;
+ padding:8px 15px 8px 15px;
+ text-align:center;
+ }
+.shop_3 li a{ 
+ border: 2px solid #ebe9eb;
+ padding:8px 15px 8px 15px;
+ text-align:center;
+ background: #ebe9eb;
+ color: #000;
+ }
+.shop_3 li a:hover{ 
+ border: 2px solid #ef7141;
+ background: #ef7141;
+ color: #fff;
+ }
+.shop_4{ 
+ padding-bottom:30px;
+ }
+#shop .progress .bar {
+ width: 0%;
+ height: 100%;
+ color: #ffffff;
+ float: left;
+ font-size: 12px;
+ text-align: center;
+ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+ background-color: #0e90d2;
+ background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+ background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+ background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+ background-image: -o-linear-gradient(top, #149bdf, #0480be);
+ background-image: linear-gradient(to bottom, #149bdf, #0480be);
+ background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+ -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-transition: width 0.6s ease;
+ -moz-transition: width 0.6s ease;
+ -o-transition: width 0.6s ease;
+ transition: width 0.6s ease;
+}
+#shop .progress-striped .bar {
+ background-color: #ef7141;
+ background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+ background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ -webkit-background-size: 40px 40px;
+ -moz-background-size: 40px 40px;
+ -o-background-size: 40px 40px;
+ background-size: 40px 40px;
+}
+#shop .progress.active .bar {
+ animation: progress-bar-stripes 2s linear infinite;
+}
+.shop_6 h2{ 
+ padding-bottom:20px;
+}
+.shop_6 ul{ 
+ border: 1px solid #efefef;
+ border-radius: 4px;
+}
+.shop_6 li{ 
+ border-bottom:1px solid #efefef;
+ line-height:40px;
+ padding:10px;
+}
+.shop_6 i{ 
+ padding-right:10px;
+ color:#999;
+}
+.shop_7 h2{ 
+ padding-top:25px;
+ padding-bottom:30px;
+}
+.shop_7 ul{ 
+ padding-bottom:30px;
+}
+.shop_7 li{ 
+ display:inline;
+ margin-right:5px;
+}
+.shop_7 li a{ 
+ border: 1px solid #000;
+ padding: 7px 11px 8px 11px;
+ border-radius: 4px;
+ font-size: 20px;
+ background-color: #000;
+ color: #fff;
+}
+.shop_7 li a:hover{ 
+ border: 1px solid #f07241;
+ background-color: #f07241;
+ color: #fff;
+}
+/********************* shop_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.shop_inner {
+ padding-top: 40px;
+ padding-bottom: 50px;
+}
+#shop {
+ text-align: center;
+}
+.shop_3 ul {
+ padding-bottom: 26px;
+}
+.shop_7 li a {
+ padding: 7px 9px 8px 9px;
+ font-size: 15px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+.shop_2 h3 a {
+ font-size: 13px;
+}
+.well_4 {
+ font-size: 12px;
+}
+.well_5 {
+ font-size: 10px;
+}
+.shop_6 h2 {
+ font-size: 20px;
+}
+.shop_7 h2 {
+ padding-top: 20px;
+ font-size: 20px;
+}
+.shop_7 li a {
+ padding: 7px 8px 8px 8px;
+ font-size: 12px;
+}
+.shop_7 li {
+ margin-right: 0px;
+}
+.shop_7 ul {
+ padding-bottom: 15px;
+}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+.shop_2 h3 a {
+ font-size:20px;
+}
+.well_4 {
+ font-size: 15px;
+}
+.well_5 {
+ font-size: 17px;
+}
+.shop_6 h2 {
+ font-size: 20px;
+}
+.shop_7 h2 {
+ padding-top: 20px;
+ font-size: 20px;
+}
+.shop_7 li a {
+ padding: 7px 8px 8px 8px;
+ font-size: 12px;
+}
+.shop_7 li {
+ margin-right: 0px;
+}
+.shop_7 ul {
+ padding-bottom: 15px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+
+}
+
+
+

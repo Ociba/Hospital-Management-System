@@ -1,0 +1,552 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* middle ****************/
+#middle{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ box-shadow: 0 0 1px black;
+}
+.middle_2{ 
+ text-align: center;
+ box-shadow: 0 0 3px #ef7141;
+ padding: 10px 20px 20px 20px;
+}
+.middle_2 i{ 
+ font-size:80px;
+ color:#EF7141;
+}
+/********************* middle_end ****************/
+/********************* design ****************/
+#design{ 
+ padding-top:30px;
+ }
+.design_1{ 
+ text-align:center;
+ }
+.design_1 p{ 
+ padding-bottom:50px;
+ }
+/********************* design_end ****************/
+/********************* order ****************/
+#order{ 
+ background-image: url(../img/5.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ }
+.order_1{ 
+ text-align:center;
+ }
+.order_1 h2{ 
+ color:#fff;
+ padding-bottom:20px;
+ }
+.order_main{ 
+ padding-top:100px;
+ padding-bottom:100px;
+ background-color: #0506fb8f;
+ }
+/********************* order_end ****************/
+/********************* updates ****************/
+#updates{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ }
+#updates .col-item
+{
+ border: 1px solid #E1E1E1;
+ border-radius: 5px;
+ background: #FFF;
+}
+#updates .col-item .photo img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+
+#updates .col-item .info
+{
+ padding: 10px;
+ border-radius: 0 0 5px 5px;
+ margin-top: 1px;
+ background-color: #212020;
+ text-align:center;
+}
+
+#updates .col-item:hover .info {
+    background-color: #000;
+}
+#updates .col-item .price
+{
+    /*width: 50%;*/
+    float: left;
+    margin-top: 5px;
+}
+
+#updates .col-item .price h5
+{
+    line-height: 20px;
+    margin: 0;
+}
+#updates .col-item .info .rating
+{
+    color: #777;
+}
+
+#updates .col-item .rating
+{
+    /*width: 50%;*/
+    float: left;
+    font-size: 17px;
+    text-align: right;
+    line-height: 52px;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+#updates .col-item .separator
+{
+    border-top: 1px solid #E1E1E1;
+}
+
+#updates .clear-left
+{
+    clear: left;
+}
+
+#updates .col-item .separator p
+{
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#updates .col-item .separator p i
+{
+    margin-right: 5px;
+	font-size:20px;
+	color:#fff;
+}
+#updates .col-item .separator p a
+{
+	font-size:20px;
+	color:#f3ee58;
+}
+#updates .col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+
+#updates .col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+
+#updates .col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+#updates .controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}
+.updates_1 h2{ 
+ padding-bottom:30px;
+ }
+.price h2 a{ 
+ color: #f6f944;
+ font-weight:bold;
+ }
+.price h2{ 
+ padding-top:10px;
+ padding-bottom:10px;
+ }
+.price h4{ 
+ color: #dbeff3;
+ font-weight: 400;
+ }
+.price p{ 
+ font-weight: 300;
+ padding-top:5px;
+ color: #fff;
+ letter-spacing:1px;
+ padding-bottom:18px;
+ }
+#updates .btn-primary {
+ color: #fff;
+ background-color: #212020;
+ border-color: #212020;
+}
+/********************* updates_end ****************/
+/********************* success ****************/
+#success{ 
+ padding-top: 30px;
+ padding-bottom: 30px;
+ background-color:#212020;
+ }
+.success_1 h2 {
+ color: #fff;
+}
+.success_1 p {
+ color: #dedede;
+}
+#quote-carousel 
+{
+ padding: 0 10px 30px 10px;
+ margin-top: 30px;
+}
+#success .item blockquote p{
+ border-left: none;
+ margin: 0;
+ color: #fff;
+}
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #fff;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left 
+{
+ left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right 
+{
+  right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+#success .item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+#success .item blockquote img {
+    margin-bottom: 10px;
+}
+
+#success .item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+#quote-carousel 
+{
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+}
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+
+#quote-carousel .carousel-indicators {
+	bottom: -20px !important;  
+}
+#quote-carousel .carousel-indicators li {
+	display: inline-block;
+	margin: 0px 5px;
+	width: 15px;
+	height: 15px;
+}
+#quote-carousel .carousel-indicators li.active {
+	margin: 0px 5px;
+	width: 20px;
+	height: 20px;
+    }
+}
+/********************* success_end ****************/
+/********************* checker ***************/
+#checker{
+ padding-top:30px;
+ padding-bottom:30px;
+  }
+.checker h2{
+ text-align:center;
+  }
+.checker h4{
+ text-align:center;
+  }
+#checker .carousel-control.left,.carousel-control.right  {background:none;}
+#checker .carousel-control.left {left:-25px;}
+#checker .carousel-control.right {right:-25px;}
+#checker .broun-block {
+ padding-bottom: 34px;
+}
+#checker .block-text {
+ background-color: #fff;
+ border-radius: 5px;
+ box-shadow: 0 3px 0 #2c2222;
+ color: #f95828;
+ font-size: 14px;
+ margin-top: 27px;
+ padding: 15px 18px;
+ box-shadow: 0 0 14px 8px #8e8c8c;
+ border-radius: 20px 60px 20px 50px;
+}
+#checker .block-text a {
+ color: #c04747;
+ font-size: 25px;
+ font-weight: bold;
+ line-height: 21px;
+ text-decoration: none;
+ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+#checker .mark {
+ padding: 12px 0;background:none;
+}
+#checker .block-text p {
+ color: #585858;
+ font-family: Georgia;
+ font-style: italic;
+ line-height: 20px;
+}
+#checker .sprite-i-triangle {
+ background-position: 0 -1298px;
+ height: 44px;
+ width: 50px;
+}
+#checker .block-text ins {
+ bottom: -44px;
+ left: 50%;
+ margin-left: -60px;
+}
+#checker .block {
+ display: block;
+}
+#checker .zmin {
+ z-index: 1;
+}
+#checker .ab {
+ position: absolute;
+}
+#checker .person-text {
+ padding: 10px 0 0;
+ z-index: 2;
+ padding-left:20px;
+ margin-top:10px;
+}
+#checker .person-text a {
+ color: #62b2ea;
+ display: block;
+ font-size: 16px;
+ font-weight: 700;
+ margin-top: 3px;
+ text-decoration: underline;
+}
+#checker .rel {
+ position: relative;
+  }
+#checker .person-text {
+ padding: 10px 0 0;
+ text-align: center;
+ z-index: 2;
+}
+#checker .person-text img{
+ border-radius:50%;
+ margin-bottom:10px;
+}
+/********************* checker_end ***************/
+/********************* business ***************/
+#business{ 
+ background-image: url(../img/15.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+}
+.business_main{ 
+ padding-top:100px;
+ padding-bottom:100px;
+ background-color: #000000a6;
+}
+.business_1{ 
+ text-align:center;
+ }
+.business_1 i{ 
+ font-size:40px;
+ color:#fff;
+ }
+.business_1 h1{ 
+ padding-top:5px;
+ color: #ef7141;
+ }
+.business_1 p{ 
+ color: #fff;
+ }
+/********************* business_end ***************/
+/********************* facts ***************/
+#facts{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ }
+.facts_2{ 
+ box-shadow: 0 0 1px black;
+ padding: 10px;
+}
+.facts_2 ul{ 
+ padding-top:12px;
+ }
+.facts_2 li{ 
+ display:inline;
+ padding-right:10px;
+ color:#999;
+ }
+.date{ 
+ color:#f07241!important;
+}
+/********************* facts_end ***************/
+
+
+
+
+@media screen and (max-width : 767px){
+#center .carousel-caption.kb_caption.kb_caption_right {
+ display: none;
+}
+.design_1 img{ 
+ width:100%;
+}
+#middle {
+ text-align: center;
+}
+.middle_2 {
+ margin-bottom: 10px;
+}
+#design {
+ padding-top: 0px;
+ text-align: center;
+}
+.design_1 p {
+ padding-bottom: 10px;
+ padding-left: 5px;
+ padding-right: 5px;
+}
+.order_main {
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+#updates {
+ text-align: center;
+}
+.updates_1 h2 {
+ padding-bottom: 0px;
+}
+#success {
+ text-align: center;
+}
+#checker {
+ text-align: center;
+}
+#facts {
+ text-align: center;
+}
+#updates .section{ 
+ overflow:hidden;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+#center .kb_caption h1{ 
+ font-size: 20px;
+}
+#center .kb_caption p {
+ font-size: 12px;
+}
+.design_1 img{ 
+ width:100%;
+}
+.success_1 h2 {
+ font-size: 25px;
+}
+#success .item blockquote p {
+ font-size: 12px;
+ padding-left: 20px;
+}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+#center .kb_caption h1{ 
+ font-size: 20px;
+}
+#center .kb_caption p {
+ font-size: 12px;
+}
+.design_1 img{ 
+ width:100%;
+}
+.success_1 h2 {
+ font-size: 25px;
+}
+#success .item blockquote p {
+ font-size: 12px;
+ padding-left: 20px;
+ padding-top: 25px;
+}
+.middle_2 h2{ 
+ font-size:30px;
+}
+.facts_2 h3{ 
+ font-size:23px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+#center .kb_caption h1{ 
+ font-size:45px;
+}
+}

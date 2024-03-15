@@ -1,0 +1,249 @@
+/*
+Template Name:Businessman
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* about_main ****************/
+#about_main{ 
+ background-image: url(../img/19.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.about_inner{ 
+ padding-top:120px;
+ padding-bottom:120px;
+ background-color: #000000ab;
+}
+.about_main_1{ 
+ text-align:center;
+}
+.about_main_1 h1{ 
+ color:#fff;
+}
+.about_main_1 h3{ 
+ margin-top:0px;
+ color:#fff;
+}
+.about_main_1 ul{ 
+ padding-top:10px;
+}
+.about_main_1 li{ 
+ display:inline;
+ padding-right:5px;
+ color: #fff;
+}
+.about_main_1 li a{ 
+ color: #ef7141;
+}
+/********************* about_main_end ****************/
+/********************* about ****************/
+#about{ 
+ padding-top:30px;
+ padding-bottom:30px;
+ }
+#about .ziehharmonika h3 {
+ background: #c04747;
+ color: #fff;
+ text-align: left;
+ border-radius: 4px;
+ padding: 14px 12px;
+ cursor: pointer;
+ margin-top: 0;
+ margin-bottom: 9px;
+ padding-right: 40px;
+ transition: 0.25s all;
+ position: relative;
+ padding-top: 11px;
+ padding-bottom: 15px;
+ font-size: 21px;
+ font-weight: 100;
+}
+#about .ziehharmonika h3.active {
+ margin-bottom: 21px;
+ background: #ef7141;
+}
+#about .ziehharmonika h3::before {
+ content: attr(data-prefix);
+ font-size:0px;
+ margin-right: 9px;
+}
+#about .ziehharmonika h3.alignLeft {
+ padding-left: 35px;
+}
+#about .ziehharmonika > div {
+ display: none;
+ background: #fff;
+ border-radius: 4px;
+ border: 1px solid #cdcdcd;
+ text-align: left;
+ padding: 31px 33px;
+ margin-bottom: 9px;
+}
+#about .ziehharmonika .arrowDown {
+ width: 0;
+ height: 0;
+ border-style: solid;
+ border-width: 13.0px 7.5px 0 7.5px;
+ border-color: #272e35 transparent transparent transparent;
+ position: absolute;
+ bottom: 0;
+ left: 40px;
+ transition: 0.25s all;
+ opacity: 0;
+}
+#about .ziehharmonika .active .arrowDown {
+ bottom: -13px;
+ border-color: #ef7141 transparent transparent transparent;
+ opacity: 1;
+}
+#about .ziehharmonika .collapseIcon {
+ position: absolute;
+ right: 20px;
+ top: 45%;
+ font-size: 25px;
+ font-weight: 300;
+ -ms-transform: translate(0, -50%);
+ transform: translate(0, -50%);
+}
+#about .ziehharmonika .collapseIcon.alignLeft {
+ right: initial;
+ left: 20px;
+}
+#about .progress .bar {
+ width: 0%;
+ height: 100%;
+ color: #ffffff;
+ float: left;
+ font-size: 12px;
+ text-align: center;
+ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+ background-color: #0e90d2;
+ background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+ background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+ background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+ background-image: -o-linear-gradient(top, #149bdf, #0480be);
+ background-image: linear-gradient(to bottom, #149bdf, #0480be);
+ background-repeat: repeat-x;
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+ -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-transition: width 0.6s ease;
+ -moz-transition: width 0.6s ease;
+ -o-transition: width 0.6s ease;
+ transition: width 0.6s ease;
+}
+#about .progress-striped .bar {
+ background-color: #ef7141;
+ background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+ background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+ -webkit-background-size: 40px 40px;
+ -moz-background-size: 40px 40px;
+ -o-background-size: 40px 40px;
+ background-size: 40px 40px;
+}
+#about .progress.active .bar {
+ animation: progress-bar-stripes 2s linear infinite;
+}
+.about_2{ 
+ padding-bottom:60px;
+ }
+.about_4 h1{ 
+ padding-top:20px;
+ padding-bottom:20px;
+ }
+.about_8 h3{ 
+ padding-top:20px;
+ }
+.about_8 h5{ 
+ color: #ef7141;
+ }
+.about_8 ul{ 
+ padding-top:10px;
+ }
+.about_8 li{ 
+ display:inline;
+ padding-right:18px;
+ }
+.about_8 li a i{ 
+ color: #ef7141;
+ }
+.about_7 img{ 
+ border-radius: 100%;
+ }
+.about_6{ 
+ box-shadow: 0px 0px 1px #8c8c8c;
+ padding: 10px;
+ margin-bottom:15px;
+ }
+.about_2 h3{ 
+ font-weight: 100!important;
+ }
+/********************* about_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+.about_inner {
+ padding-top: 40px;
+ padding-bottom:60px;
+}
+.about_main_1 h3 {
+ font-size: 18px;
+}
+#about {
+ text-align: center;
+}
+.about_2 {
+ padding-bottom: 20px;
+}
+}
+
+@media (min-width:470px) and (max-width:767px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+#about .ziehharmonika h3 {
+ font-size: 16px;
+}
+.about_4 h1 {
+ padding-top: 0px;
+ padding-bottom: 10px;
+ font-size: 50px;
+}
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+#about .ziehharmonika h3 {
+ font-size: 16px;
+}
+.about_4 h1 {
+ padding-top: 0px;
+ padding-bottom: 10px;
+ font-size: 50px;
+}
+.about_8 li {
+ padding-right: 10px;
+}
+.about_8 h3 {
+ font-size: 22px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1325px) {
+
+}
+
+
+

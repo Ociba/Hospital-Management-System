@@ -1,0 +1,11 @@
+{
+    "name": "SwitchLanguage",
+    "alias": "switchlanguage",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SwitchLanguage\\App\\Providers\\SwitchLanguageServiceProvider"
+    ],
+    "files": []
+}
