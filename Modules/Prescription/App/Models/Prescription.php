@@ -5,6 +5,8 @@ namespace Modules\Prescription\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Prescription\Database\factories\PrescriptionFactory;
+use Ramsey\Uuid\Uuid;
+use App\Models\User;
 
 class Prescription extends Model
 {

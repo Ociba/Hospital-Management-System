@@ -5,6 +5,8 @@ namespace Modules\Description\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Description\Database\factories\DescriptionFactory;
+use Ramsey\Uuid\Uuid;
+use App\Models\User;
 
 class Description extends Model
 {

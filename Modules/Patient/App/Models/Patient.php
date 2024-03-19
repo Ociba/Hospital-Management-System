@@ -5,6 +5,8 @@ namespace Modules\Patient\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Patient\Database\factories\PatientFactory;
+use Ramsey\Uuid\Uuid;
+use App\Models\User;
 
 class Patient extends Model
 {

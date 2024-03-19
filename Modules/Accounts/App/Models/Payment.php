@@ -5,6 +5,7 @@ namespace Modules\Accounts\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Accounts\Database\factories\PaymentFactory;
+use Ramsey\Uuid\Uuid;
 
 class Payment extends Model
 {
@@ -29,20 +30,23 @@ class Payment extends Model
     }
     public function scopeSearch($query, $val)
     {
-        return $query->where('paid_for', 'like', '%'.$val.'%')
-                    ->orWhere('paid_for','like', '%' .val.'%')
+        return $query->where('quantity', 'like', '%'.$val.'%')
+                    ->orWhere('payment_type','like', '%' .val.'%')
                     ->orWhere('amount','like', '%' .val.'%')
                     ->orWhere('date','like', '%' .val.'%')
-                    ->orWhere('payment_type','like', '%' .val.'%');
+                    ->orWhere('payment_status','like', '%' .val.'%')
+                    ->orWhere('patients.first_name','like', '%' .val.'%');
     }
 
     protected static function createPayment(){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_id' => $fields['patient_id'],
-            'paid_for' => $fields['paid_for'],
-            'amount' => $fields['amount'],
-            'payment_type' => $fields['payment_type'],
+            'medicine_id'=> $fields['medicine_id'],
+            'quantity'=> $fields['quantity'],
+            'payment_type'=> $fields['payment_type'],
+            'payment_status'=> $fields['payment_status'],
+            'pharmacy_status'=> $fields['pharmacy_status'],
             'date' => $fields['date'],
             'created_by' => $fields['created_by'],
             'updated_by' =>$fields['updated_by'],
@@ -59,10 +63,11 @@ class Payment extends Model
     public static function updatePayment($payment_id, $fields)
     {
         self::whereId($payment_id)->update([
+            'quantity'=> $fields['quantity'],
+            'payment_type'=> $fields['payment_type'],
+            'payment_status'=> $fields['payment_status'],
+            'pharmacy_status'=> $fields['pharmacy_status'],
             'date' => $fields['date'],
-            'paid_for' => $fields['paid_for'],
-            'amount' => $fields['amount'],
-            'payment_type' => $fields['payment_type'],
         ]);
     }
 

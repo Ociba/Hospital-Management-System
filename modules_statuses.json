@@ -15,5 +15,7 @@
     "SwitchLanguage": true,
     "Drugs": true,
     "ConsultationRoom": true,
-    "Treatment": true
+    "Treatment": true,
+    "Ward": true,
+    "Theatre": true
 }

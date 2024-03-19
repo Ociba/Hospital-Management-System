@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\App;
 
 class SwitchLanguageController extends Controller
 {
@@ -14,8 +15,18 @@ class SwitchLanguageController extends Controller
      */
     public function switch(Request $request)
     {
-        $locale =$request->input('locale');
-        session(['locale' =>$locale]);
+         // Validate the request
+        $request->validate([
+            'locale' => 'required|in:en,fr', // Ensure only 'en' or 'fr' locales are allowed
+        ]);
+
+        // Set the application locale based on user's selection
+        App::setLocale($request->locale);
+
+        // Store the locale in the session
+        session(['locale' => $request->locale]);
+
+        // Redirect back to the previous page or any desired page
         return back();
     }
 

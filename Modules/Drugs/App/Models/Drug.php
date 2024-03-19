@@ -5,6 +5,8 @@ namespace Modules\Drugs\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Drugs\Database\factories\DrugFactory;
+use Ramsey\Uuid\Uuid;
+use App\Models\User;
 
 class Drug extends Model
 {

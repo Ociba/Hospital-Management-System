@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/theatre",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Theatre\\": "",
+            "Modules\\Theatre\\App\\": "app/",
+            "Modules\\Theatre\\Database\\Factories\\": "database/factories/",
+            "Modules\\Theatre\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Theatre\\Tests\\": "tests/"
+        }
+    }
+}

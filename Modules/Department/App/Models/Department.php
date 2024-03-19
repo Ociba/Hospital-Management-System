@@ -5,6 +5,8 @@ namespace Modules\Department\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Department\Database\factories\DepartmentFactory;
+use Ramsey\Uuid\Uuid;
+use App\Models\User;
 
 class Department extends Model
 {
@@ -36,6 +38,7 @@ class Department extends Model
         self::create([
             'id' => Uuid::uuid4(),
             'department' => $fields['department'],
+            'description' => $fields['description'],
             'created_by' => $fields['created_by'],
             'updated_by' => $fields['updated_by'],
         ]);
