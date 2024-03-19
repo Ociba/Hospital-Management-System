@@ -14,11 +14,13 @@ return new class extends Migration
     {
         Schema::create('drugs', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->uuid('patient_id')->nullable();
+            $table->uuid('doctor_id')->nullable();
             $table->string('drug_name');
             $table->string('drug_type');
-            $table->string('capacity');
+            $table->string('quantity');
             $table->text('composition')->nullable();
-            $table->text('reason_in_case_of_others')->nullable();
+            $table->string('drug_prescription')->nullable();
             $table->uuid('created_by');
             $table->uuid('updated_by')->nullable();
             $table->softDeletes();

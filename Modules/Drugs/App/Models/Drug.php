@@ -34,22 +34,25 @@ class Drug extends Model
     {
         return $query->where('drug_name', 'like', '%'.$val.'%')
                     ->orWhere('drug_type','like', '%' .val.'%')
-                    ->orWhere('capacity','like', '%' .val.'%')
+                    ->orWhere('quantity','like', '%' .val.'%')
                     ->orWhere('composition','like', '%' .val.'%');
     }
 
-    protected static function createLabTest(){
+    protected static function createDrug(){
         self::create([
             'id' => Uuid::uuid4(),
+            'patient_id' =>$fields['patient_id'],
+            'doctor_id'  =>$fields['doctor_id'],
             'drug_name' => $fields['drug_name'],
             'drug_type' => $fields['drug_type'],
-            'capacity' => $fields['capacity'],
+            'quantity' => $fields['quantity'],
             'composition' => $fields['composition'],
+            'drug_prescription' => $fields['drug_prescription'],
             'created_by' => $fields['created_by'],
             'updated_by' =>$fields['updated_by'],
         ]);
     }
-    public static function getLabTest($search, $sortBy, $sortDirection, $perPage){
+    public static function getDrug($search, $sortBy, $sortDirection, $perPage){
         // Define a default column and direction in case $sortBy is empty.
         $sortBy = $sortBy ?: 'drug_name';
         $sortDirection = $sortDirection ?: 'desc';
@@ -57,18 +60,19 @@ class Drug extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateLabTest($lab_test_id, $fields)
+    public static function updateDrug($drug_id, $fields)
     {
-        self::whereId($lab_test_id)->update([
+        self::whereId($drug_id)->update([
             'drug_name' => $fields['drug_name'],
             'drug_type' => $fields['drug_type'],
-            'capacity' => $fields['capacity'],
+            'quantity' => $fields['quantity'],
             'composition' => $fields['composition'],
+            'drug_prescription' => $fields['drug_prescription'],
         ]);
     }
 
-    public static function deleteLabTest($lab_test_id)
+    public static function deleteDrug($drug_id)
     {
-        self::whereId($lab_test_id)->delete();
+        self::whereId($drug_id)->delete();
     }
 }

@@ -67,7 +67,7 @@ class Staff extends Model
         ]);
     }
 
-    public static function deleteService($staffId)
+    public static function deleteStaff($staffId)
     {
         self::whereId($staffId)->delete();
     }
