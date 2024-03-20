@@ -30,9 +30,33 @@ class Patient extends Model
         //return PatientFactory::new();
     }
     protected static function createPatient(){
-        
         self::create([
             'id' => Uuid::uuid4(),
+            'patient_name' => $fields['patient_name'],
+            'date_of_birth' => $fields['date_of_birth'],
+            'service_id' => $fields['service_id'],
+            'gender' => $fields['gender'],
+            'national_id_number' => $fields['national_id_number'],
+            'home_district' => $fields['home_district'],
+            'district_of_residence' => $fields['district_of_residence'],
+            'county' => $fields['county'],
+            'sub_county' => $fields['sub_county'],
+            'parish' => $fields['parish'],
+            'village' => $fields['village'],
+            'phone_number' => $fields['phone_number'],
+            'category' => $fields['category'],
+            'next_of_kin' => $fields['next_of_kin'],
+            'next_of_kin_contact' => $fields['next_of_kin_contact'],
+            'next_of_kin_relationship' => $fields['next_of_kin_relationship'],
+            'image' => $fields['image'],
+            'appointment_status' => $fields['appointment_status'],
+        ]);
+    }
+    protected static function createLoggedinPatient(){
+        $patients_name =User::where('id',auth()->user()->id) ->value('name');
+        self::create([
+            'id' => Uuid::uuid4(),
+            'patient_name' => $patients_name,
             'date_of_birth' => $fields['date_of_birth'],
             'service_id' => $fields['service_id'],
             'gender' => $fields['gender'],

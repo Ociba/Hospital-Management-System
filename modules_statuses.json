@@ -17,5 +17,6 @@
     "ConsultationRoom": true,
     "Treatment": true,
     "Ward": true,
-    "Theatre": true
+    "Theatre": true,
+    "Mortuary": true
 }

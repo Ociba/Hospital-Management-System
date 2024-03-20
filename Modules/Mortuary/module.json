@@ -1,0 +1,11 @@
+{
+    "name": "Mortuary",
+    "alias": "mortuary",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Mortuary\\App\\Providers\\MortuaryServiceProvider"
+    ],
+    "files": []
+}

@@ -14,6 +14,9 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('other_names');
             $table->uuid('service_id');
             $table->string('gender');
             $table->string('date_of_birth');
