@@ -29,7 +29,7 @@ class Patient extends Model
     {
         //return PatientFactory::new();
     }
-    protected static function createPatient(){
+    protected static function createPatient($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_name' => $fields['patient_name'],
@@ -52,7 +52,7 @@ class Patient extends Model
             'appointment_status' => $fields['appointment_status'],
         ]);
     }
-    protected static function createLoggedinPatient(){
+    protected static function createLoggedinPatient($fields){
         $patients_name =User::where('id',auth()->user()->id) ->value('name');
         self::create([
             'id' => Uuid::uuid4(),
@@ -84,9 +84,14 @@ class Patient extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updatePatient($patientId, $fields)
+    public static function getParticularPatient($PatientId)
     {
-        self::whereId($patientId)->update([
+        return self::whereId($PatientId)->with('creator')->get();
+    }
+
+    public static function updatePatient($PatientId, $fields)
+    {
+        self::whereId($PatientId)->update([
             'date_of_birth' => $fields['date_of_birth'],
             'service_id' => $fields['service_id'],
             'gender' => $fields['gender'],
@@ -107,8 +112,8 @@ class Patient extends Model
         ]);
     }
 
-    public static function deletePatient($patientId)
+    public static function deletePatient($PatientId)
     {
-        self::whereId($patientId)->delete();
+        self::whereId($PatientId)->delete();
     }
 }

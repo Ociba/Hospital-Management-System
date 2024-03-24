@@ -56,6 +56,12 @@ class Theatre extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
+
+    public static function getParticularTheatre($TheatreId)
+    {
+        return self::whereId($TheatreId)->with('creator')->get();
+    }
+
     public static function updateTheatre($theatre_id, $fields)
     {
         self::whereId($theatre_id)->update([

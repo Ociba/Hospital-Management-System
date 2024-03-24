@@ -59,9 +59,13 @@ class Appointment extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updatePatient($appointment_id, $fields)
+    public static function getParticularAppointment($AppointmentId)
     {
-        self::whereId($appointment_id)->update([
+        return self::whereId($serviceId)->with('creator')->get();
+    }
+    public static function updatePatient($AppointmentId, $fields)
+    {
+        self::whereId($AppointmentId)->update([
             'service_id' => $fields['service_id'],
             'consultation_fee' => $fields['consultation_fee'],
             'date' => $fields['date'],
@@ -71,8 +75,8 @@ class Appointment extends Model
         ]);
     }
 
-    public static function deleteAppointment($appointment_id)
+    public static function deleteAppointment($AppointmentId)
     {
-        self::whereId($appointment_id)->delete();
+        self::whereId($AppointmentId)->delete();
     }
 }

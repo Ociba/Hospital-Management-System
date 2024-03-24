@@ -7,16 +7,40 @@ use Modules\Accounts\App\Models\Payment;
 
 class PaymentService
 {
-    public static function createFinancialStatement($fields)
+    public static function createPayment($fields)
     {
         try {
-            FinancialStatement::createFinancialStatement($fields);
+            return Payment::createPayment($fields);
         } catch (\Exception $e) {
-            Log::error('Error creating financial statement: '.$e->getMessage());
-            Log::error($e->getTraceAsString());
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
+    public static function getPayment($search, $sortBy, $sortDirection, $perPage)
+    {
+        try {
+            return Payment::getPayment($search, $sortBy, $sortDirection, $perPage);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
 
-            return 'An error occurred. Please check the logs for details.';
-            // return "An error occurred ". $e->getMessage();
+    public static function getParticularPayment($paymentId): JsonResponse
+    {
+        try {
+            return response()->json(['data' => Payment::getParticularPayment($paymentId)]);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
+
+    public static function deletePayment($paymentId): JsonResponse
+    {
+        try {
+            Payment::deletePayment($paymentId);
+
+            return response()->json(['success' => 'operation successful']);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
 }

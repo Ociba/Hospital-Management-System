@@ -37,7 +37,7 @@ class Prescription extends Model
                     ->orWhere('rate','like', '%' .val.'%');
     }
 
-    protected static function createLabTest(){
+    protected static function createPrescription(){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_id' => $fields['patient_id'],
@@ -47,7 +47,7 @@ class Prescription extends Model
             'created_by' => $fields['created_by'],
         ]);
     }
-    public static function getLabTest($search, $sortBy, $sortDirection, $perPage){
+    public static function getPrescription($search, $sortBy, $sortDirection, $perPage){
         // Define a default column and direction in case $sortBy is empty.
         $sortBy = $sortBy ?: 'drug_name';
         $sortDirection = $sortDirection ?: 'desc';
@@ -55,17 +55,23 @@ class Prescription extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateLabTest($lab_test_id, $fields)
+
+    public static function getParticularPrescription($PrescriptionId)
     {
-        self::whereId($lab_test_id)->update([
+        return self::whereId($PrescriptionId)->with('creator')->get();
+    }
+
+    public static function updatePrescription($PrescriptionId, $fields)
+    {
+        self::whereId($PrescriptionId)->update([
             'drug_id' => $fields['drug_id'],
             'days' => $fields['days'],
             'dose' => $fields['dose'],
         ]);
     }
 
-    public static function deleteLabTest($lab_test_id)
+    public static function deletePrescription($PrescriptionId)
     {
-        self::whereId($lab_test_id)->delete();
+        self::whereId($PrescriptionId)->delete();
     }
 }

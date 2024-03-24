@@ -52,16 +52,20 @@ class Description extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateDescription($description_id, $fields)
+    public static function getParticularDescription($DescriptionId)
     {
-        self::whereId($description_id)->update([
+        return self::whereId($DescriptionId)->with('creator')->get();
+    }
+    public static function updateDescription($DescriptionId, $fields)
+    {
+        self::whereId($DescriptionId)->update([
             'description' => $fields['description'],
             'refer'       => $fields['refer'],
         ]);
     }
 
-    public static function deleteDescription($description_id)
+    public static function deleteDescription($DescriptionId)
     {
-        self::whereId($description_id)->delete();
+        self::whereId($DescriptionId)->delete();
     }
 }

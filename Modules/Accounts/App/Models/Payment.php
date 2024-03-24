@@ -38,7 +38,7 @@ class Payment extends Model
                     ->orWhere('patients.first_name','like', '%' .val.'%');
     }
 
-    protected static function createPayment(){
+    protected static function createPayment($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_id' => $fields['patient_id'],
@@ -60,9 +60,13 @@ class Payment extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updatePayment($payment_id, $fields)
+    public static function getParticularPayment($paymentId)
     {
-        self::whereId($payment_id)->update([
+        return self::whereId($paymentId)->with('creator')->get();
+    }
+    public static function updatePayment($paymentId, $fields)
+    {
+        self::whereId($paymentId)->update([
             'quantity'=> $fields['quantity'],
             'payment_type'=> $fields['payment_type'],
             'payment_status'=> $fields['payment_status'],
@@ -71,8 +75,8 @@ class Payment extends Model
         ]);
     }
 
-    public static function deletePayment($payment_id)
+    public static function deletePayment($paymentId)
     {
-        self::whereId($payment_id)->delete();
+        self::whereId($paymentId)->delete();
     }
 }

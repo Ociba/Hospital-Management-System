@@ -429,7 +429,7 @@
                 </div>
             </div>
         </section>
-        <section id="center">
+        {{--<section id="center">
             <div class="container container_size center-bg">
                 <div class="row">
                     <div class="col-sm-12">
@@ -1197,7 +1197,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         @include('front.footer')
         <div id='cookie-bar' class="cookiealert">
             <div id='contentcookie'>

@@ -34,7 +34,7 @@ class Staff extends Model
         return $query->where('type', 'like', '%'.$val.'%');
     }
 
-    protected static function createStaff(){
+    protected static function createStaff($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'staff_category' => $fields['staff_category'],
@@ -58,6 +58,14 @@ class Staff extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
+
+
+    public static function getParticularStaff($staffId)
+    {
+        return self::whereId($staffId)->with('creator')->get();
+    }
+
+
     public static function updateStaff($staffId, $fields)
     {
         self::whereId($staffId)->update([

@@ -14,6 +14,6 @@ use Modules\Admin\App\Http\Controllers\AdminController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('admin', AdminController::class)->names('admin');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'AdminController@index')->name('Dashboard');
 });

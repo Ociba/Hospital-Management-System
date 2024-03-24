@@ -57,9 +57,13 @@ class Laboratory extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateLabTest($lab_test_id, $fields)
+    public static function getParticularLaboratory($LaboratoryId)
     {
-        self::whereId($lab_test_id)->update([
+        return self::whereId($LaboratoryId)->with('creator')->get();
+    }
+    public static function updateLabTest($LaboratoryId, $fields)
+    {
+        self::whereId($LaboratoryId)->update([
             'test_type' => $fields['test_type'],
             'indicator' => $fields['indicator'],
             'result_status' => $fields['result_status'],
@@ -67,8 +71,8 @@ class Laboratory extends Model
         ]);
     }
 
-    public static function deleteLabTest($lab_test_id)
+    public static function deleteLabTest($LaboratoryId)
     {
-        self::whereId($lab_test_id)->delete();
+        self::whereId($LaboratoryId)->delete();
     }
 }

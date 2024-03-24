@@ -13,9 +13,9 @@ class SetupController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function userType()
     {
-        return view('setup::index');
+        return view('setup::user_type');
     }
 
     /**

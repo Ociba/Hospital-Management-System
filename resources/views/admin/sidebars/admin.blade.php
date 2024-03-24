@@ -3,7 +3,7 @@
     <div class="position-sticky">
         <ul class="nav flex-column mb-2 list-unstyled ps-0">
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/admin/dashboard"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop active_tab"><i
                     class="fa fa-dashboard icon-before"></i><span class="btn">Dashboard</span></a>
             </li>
@@ -215,9 +215,9 @@
                 <a href="javascript:void(0);" class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m" data-bs-toggle="collapse" data-bs-target="#Forms-collapse" aria-expanded="false"><i class="fa fa-file icon-before"></i><span class="btn">Set up</span><i class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="Forms-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_basic.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> User Type</span></a></li>
-                        <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_validation.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Department</span></a></li>
-                        <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_wizard.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Service</span></a></li>
+                        <li><a href="/setup/user_type" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> User Type</span></a></li>
+                        <li><a href="/setup/department" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Department</span></a></li>
+                        <li><a href="/setup/service" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Service</span></a></li>
                     </ul>
                 </div>
             </li>

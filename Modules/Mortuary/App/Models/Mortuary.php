@@ -34,7 +34,7 @@ class Mortuary extends Model
         return $query->where('type', 'like', '%'.$val.'%');
     }
 
-    protected static function createMortuary(){
+    protected static function createMortuary($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_id'=> $fields['patient_id'],
@@ -52,19 +52,20 @@ class Mortuary extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateStaff($staffId, $fields)
+    public static function getParticularMortuary($MortuaryId)
     {
-        self::whereId($staffId)->update([
-            'dob'           => $fields['dob'],
-            'experience'    => $fields['experience'],
-            'language'      => $fields['language'],
-            'mobile_number' => $fields['mobile_number'],
-            'schedule'      => $fields['schedule'],
+        return self::whereId($MortuaryId)->with('creator')->get();
+    }
+    public static function updateMortuary($MortuaryId, $fields)
+    {
+        self::whereId($MortuaryId)->update([
+            'date_received'=> $fields['date_received'],
+            'date_taken'=> $fields['date_taken'],
         ]);
     }
 
-    public static function deleteStaff($staffId)
+    public static function deleteMortuary($MortuaryId)
     {
-        self::whereId($staffId)->delete();
+        self::whereId($MortuaryId)->delete();
     }
 }

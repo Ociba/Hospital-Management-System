@@ -34,7 +34,7 @@ class Ward extends Model
         return $query->where('users.name', 'like', '%'.$val.'%');
     }
 
-    protected static function createWard(){
+    protected static function createWard($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'patient_id' => $fields['patient_id'],
@@ -60,6 +60,14 @@ class Ward extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
+
+
+    public static function getParticularWard($WardId)
+    {
+        return self::whereId($WardId)->with('creator')->get();
+    }
+
+
     public static function updateWard($ward_id, $fields)
     {
         self::whereId($ward_id)->update([

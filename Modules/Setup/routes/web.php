@@ -15,6 +15,6 @@ use Modules\Setup\App\Http\Controllers\SetupController;
 */
 
 Route::group(['prefix' => 'setup', 'middleware' => ['auth']], function () {
-    Route::get('/', 'SetupController@index')->name('setup');
+    Route::get('/user_type', 'SetupController@userType')->name('User Type');
 });
 Route::get('/logout', 'SetupController@logoutUser');

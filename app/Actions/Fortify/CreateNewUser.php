@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use Ramsey\Uuid\Uuid;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -28,6 +29,7 @@ class CreateNewUser implements CreatesNewUsers
         ])->validate();
 
         return User::create([
+            'id' => Uuid::uuid4(),
             'name' => $input['name'],
             'user_type'  => 'patient',
             'email' => $input['email'],

@@ -54,6 +54,10 @@ class Service extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
+    public static function getParticularService($serviceId)
+    {
+        return self::whereId($serviceId)->with('creator')->get();
+    }
     public static function updateService($serviceId, $fields)
     {
         self::whereId($serviceId)->update([

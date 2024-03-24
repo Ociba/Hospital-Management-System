@@ -54,16 +54,23 @@ class Treatment extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateTreatment($treatment_id, $fields)
+
+    public static function getParticularTreatment($TreatmentId)
     {
-        self::whereId($treatment_id)->update([
+        return self::whereId($TreatmentId)->with('creator')->get();
+    }
+
+
+    public static function updateTreatment($TreatmentId, $fields)
+    {
+        self::whereId($TreatmentId)->update([
             'prescription' => $fields['prescription'],
             'time_frame' => $fields['time_frame'],
         ]);
     }
 
-    public static function deleteTreatment($treatment_id)
+    public static function deleteTreatment($TreatmentId)
     {
-        self::whereId($treatment_id)->delete();
+        self::whereId($TreatmentId)->delete();
     }
 }

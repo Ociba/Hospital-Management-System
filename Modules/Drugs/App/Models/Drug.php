@@ -60,9 +60,13 @@ class Drug extends Model
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
-    public static function updateDrug($drug_id, $fields)
+    public static function getParticularDrug($DrugId)
     {
-        self::whereId($drug_id)->update([
+        return self::whereId($DrugId)->with('creator')->get();
+    }
+    public static function updateDrug($DrugId, $fields)
+    {
+        self::whereId($DrugId)->update([
             'drug_name' => $fields['drug_name'],
             'drug_type' => $fields['drug_type'],
             'quantity' => $fields['quantity'],
@@ -71,8 +75,8 @@ class Drug extends Model
         ]);
     }
 
-    public static function deleteDrug($drug_id)
+    public static function deleteDrug($DrugId)
     {
-        self::whereId($drug_id)->delete();
+        self::whereId($DrugId)->delete();
     }
 }
