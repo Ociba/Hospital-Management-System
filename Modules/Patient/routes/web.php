@@ -18,4 +18,9 @@ Route::group(['prefix' => 'patient', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', 'PatientController@index')->name('Dashboard');
     Route::get('/booking', 'PatientController@booking')->name('Booking');
     Route::get('/reception', 'PatientController@reception')->name('Reception');
+    Route::get('/payment', 'PatientController@myPayment')->name('My Payments');
+    Route::get('/my_profile', 'PatientController@myProfile')->name('My Profile');
+    Route::get('/lab_results', 'PatientController@labResults')->name('My Results');
+    Route::get('/prescription', 'PatientController@myPrescription')->name('My Prescription');
+    Route::get('/change_password', 'PatientController@changeMyPassword')->name('Change Password');
 });

@@ -4,56 +4,41 @@
 
         <ul class="nav flex-column mb-2 list-unstyled ps-0">
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/patient/dashboard"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop active_tab"><i
                         class="fa fa-dashboard icon-before"></i><span class="btn">Dashboard</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/chat.html')}}"
+                <a href="/patient/payment"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-comment-o icon-before"></i><span class="btn">Payments</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/patient/my_profile"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-dashboard icon-before"></i><span class="btn">My Profile</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/appointment/make-appointment"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-dashboard icon-before"></i><span class="btn">Make Appointment</span></a>
             </li>
 
             <li class="nav-item">
-
-                <a href="javascript:void(0);"
-                    class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m"
-                    data-bs-toggle="collapse" data-bs-target="#base-collapse" aria-expanded="false"><i
-                        class="fa fa-diamond icon-before"></i><span class="btn">Laboratory</span><i
-                        class="fa fa-chevron-right"></i></a>
-                <div class="collapse" id="base-collapse" style="">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_typo.html')}}"
-                            class="link-dark rounded w-100"><span><i
-                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Results </span></a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="/patient/lab_results"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-check icon-before"></i><span class="btn">Laboratory Results</span></a>
             </li>
 
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/chat.html')}}"
+                <a href="/patient/prescription"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-comment-o icon-before"></i><span class="btn">Prescription</span></a>
             </li>
             <li class="nav-item">
-            <a href="javascript:void(0);" class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m" data-bs-toggle="collapse" data-bs-target="#Forms-collapse" aria-expanded="false"><i class="fa fa-file icon-before"></i><span class="btn">Set up</span><i class="fa fa-chevron-right"></i></a>
-            <div class="collapse" id="Forms-collapse" style="">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_basic.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Change Password</span></a></li>
-                </ul>
-            </div>
+                <a href="/patient/change_password"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-file icon-before"></i><span class="btn">Change Password</span></a>
             </li>
         </ul>
 

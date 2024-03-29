@@ -7,11 +7,11 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\User;
 
-class Appointment extends Component
+class MyPrescription extends Component
 {
     use WithPagination, WithSorting;
 
-    protected $listeners = ['Appointment' => '$refresh'];
+    protected $listeners = ['MyPrescription' => '$refresh'];
 
     //over ridding sort by from the trait
     public $sortBy = '';
@@ -21,7 +21,7 @@ class Appointment extends Component
 
     public function render()
     {
-        return view('livewire.patient.appointment',[
+        return view('livewire.patient.my-prescription',[
             'users' =>User::getUsers($this->search, $this->sortBy, $this->sortDirection, $this->perPage)
         ]);
     }

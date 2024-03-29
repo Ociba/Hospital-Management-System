@@ -20,9 +20,9 @@ class AppointmentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function nakeAppointment()
     {
-        return view('appointment::create');
+        return view('appointment::make_appointment');
     }
 
     /**

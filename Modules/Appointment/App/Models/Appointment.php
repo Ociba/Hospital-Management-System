@@ -51,6 +51,20 @@ class Appointment extends Model
             'updated_by' =>$fields['updated_by'],
         ]);
     }
+    protected static function selfAppointment($fields){
+        $patient =Patient::createPatient();
+        self::create([
+            'id' => Uuid::uuid4(),
+            'patient_id' => $fields['patients_id'],
+            'service_id' => $fields['service_id'],
+            'consultation_fee' => $fields['consultation_fee'],
+            'date' => $fields['date'],
+            'time' => $fields['time'],
+            'consultation_room' =>$fields['consultation_room'],
+            'created_by' => $fields['created_by'],
+            'updated_by' =>$fields['updated_by'],
+        ]);
+    }
     public static function getAppointment($search, $sortBy, $sortDirection, $perPage){
         // Define a default column and direction in case $sortBy is empty.
         $sortBy = $sortBy ?: 'date';

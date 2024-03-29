@@ -24,16 +24,32 @@ class PatientController extends Controller
     public function reception()
     {
         return view('patient::reception');
-    }
+    } 
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function myPayment()
     {
-        return view('patient::create');
+        return view('patient::my_payment');
     }
-
+    
+    public function myProfile()
+    {
+        return view('patient::my_profile');
+    }
+    public function labResults()
+    {
+        return view('patient::my_lab_results');
+    }
+    public function myPrescription()
+    {
+        return view('patient::my_prescription');
+    }
+    public function changeMyPassword()
+    {
+        return view('patient::change_Password');
+    }
     /**
      * Store a newly created resource in storage.
      */

@@ -15,5 +15,6 @@ use Modules\Appointment\App\Http\Controllers\AppointmentController;
 */
 
 Route::group(['prefix' => 'appointment', 'middleware' => ['auth']], function () {
+    Route::get('/make-appointment','AppointmentController@nakeAppointment')->name('Make Appointment');
     Route::get('/{appointment_status}', 'AppointmentController@index')->name('Appointment');
 });
