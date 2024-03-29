@@ -14,6 +14,6 @@ use Modules\Ward\App\Http\Controllers\WardController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('ward', WardController::class)->names('ward');
+Route::group(['prefix' => 'ward', 'middleware' => ['auth']], function () {
+    Route::get('/{status}', 'WardController@index')->name('ward');
 });

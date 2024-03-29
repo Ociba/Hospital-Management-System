@@ -20,3 +20,4 @@
 </script>
 <script src="{{ asset('asset/upload/aedemodir/bootstrap5/js/chart.min.js')}}"></script>
 <link href="{{ asset('asset/upload/aedemodir/bootstrap5/css/table.css')}}" rel="stylesheet">
+@livewireStyles

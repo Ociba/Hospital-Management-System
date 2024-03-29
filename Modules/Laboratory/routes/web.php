@@ -14,6 +14,8 @@ use Modules\Laboratory\App\Http\Controllers\LaboratoryController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('laboratory', LaboratoryController::class)->names('laboratory');
+Route::group(['prefix' => 'laboratory', 'middleware' => ['auth']], function () {
+    Route::get('/stock', 'LaboratoryController@stock')->name('Laboratory Stock');
+    Route::get('/stock_usage', 'LaboratoryController@stockUsage')->name('Laboratory Stock Usage');
+    Route::get('/results', 'LaboratoryController@patientResults')->name('Laboratory Results');
 });

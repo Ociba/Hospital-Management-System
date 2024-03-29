@@ -12,8 +12,9 @@ use Modules\Staff\App\Http\Controllers\StaffController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
 
-Route::group([], function () {
-    Route::resource('staff', StaffController::class)->names('staff');
+Route::group(['prefix' => 'staff', 'middleware' => ['auth']], function () {
+    Route::get('/', 'StaffController@index')->name('Staff');
+    Route::get('/support_staff', 'StaffController@supportStaff')->name('Support Staff');
 });

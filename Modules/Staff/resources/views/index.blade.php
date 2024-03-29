@@ -1,7 +1,7 @@
-@extends('staff::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('staff.name') !!}</p>
+@livewire('admin.staff.staff')
+
 @endsection

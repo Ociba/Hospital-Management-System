@@ -17,6 +17,15 @@ class PatientController extends Controller
         return view('patient::index');
     }
 
+    public function booking()
+    {
+        return view('patient::booking');
+    }
+    public function reception()
+    {
+        return view('patient::reception');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

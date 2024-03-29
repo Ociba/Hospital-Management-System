@@ -6,3 +6,10 @@
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 </script>
+<script defer src="{{ asset('assets/js/cdn1.js')}}"></script>
+
+<!-- Focus plugin -->
+<script defer src="{{ asset('assets/js/cdn2.js')}}"></script>
+{{--<link href="{{ asset('assets/css/tailwind.css')}}" rel="stylesheet">--}}
+@livewire('livewire-ui-modal')
+@livewireScripts

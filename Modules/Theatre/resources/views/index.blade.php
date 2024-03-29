@@ -1,7 +1,7 @@
-@extends('theatre::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('theatre.name') !!}</p>
+@livewire('admin.staff.theatre')
+
 @endsection

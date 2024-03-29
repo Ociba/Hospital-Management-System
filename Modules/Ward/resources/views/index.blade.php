@@ -1,7 +1,7 @@
-@extends('ward::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('ward.name') !!}</p>
+@livewire('admin.staff.ward')
+
 @endsection

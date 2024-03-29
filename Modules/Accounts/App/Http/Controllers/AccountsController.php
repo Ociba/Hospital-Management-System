@@ -16,7 +16,9 @@ class AccountsController extends Controller
     {
         return view('accounts::index');
     }
-
+    public function payment(){
+        return view('accounts::payment');
+    }
     /**
      * Show the form for creating a new resource.
      */

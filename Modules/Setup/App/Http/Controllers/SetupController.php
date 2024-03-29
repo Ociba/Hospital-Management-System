@@ -71,4 +71,10 @@ class SetupController extends Controller
 
         return redirect('/');
     }
+    public function department(){
+        return view('setup::department');
+    }
+    public function service(){
+        return view('setup::service');
+    }
 }

@@ -14,6 +14,7 @@ use Modules\Accounts\App\Http\Controllers\AccountsController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('accounts', AccountsController::class)->names('accounts');
+Route::group(['prefix' => 'accounts', 'middleware' => ['auth']], function () {
+    Route::get('/stock', 'AccountsController@index')->name('Accounts Stock');
+    Route::get('/payment', 'AccountsController@payment')->name('Accounts');
 });

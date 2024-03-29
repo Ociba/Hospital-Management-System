@@ -14,6 +14,6 @@ use Modules\Appointment\App\Http\Controllers\AppointmentController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('appointment', AppointmentController::class)->names('appointment');
+Route::group(['prefix' => 'appointment', 'middleware' => ['auth']], function () {
+    Route::get('/{appointment_status}', 'AppointmentController@index')->name('Appointment');
 });

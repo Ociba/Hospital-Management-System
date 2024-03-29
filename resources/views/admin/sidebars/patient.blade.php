@@ -19,33 +19,10 @@
                         class="fa fa-dashboard icon-before"></i><span class="btn">My Profile</span></a>
             </li>
             <li class="nav-item">
-
-                <a href="javascript:void(0);"
-                    class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m"
-                    data-bs-toggle="collapse" data-bs-target="#pages-collapse" aria-expanded="false"><i
-                        class="fa fa-copy icon-before"></i><span class="btn">Appointments</span><i
-                        class="fa fa-chevron-right"></i></a>
-                <div class="collapse" id="pages-collapse" style="">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/profile.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Pending</span></a></li>
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authen_login.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Cancelled</span></a></li>
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/login2.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Successful</span></a></li>
-
-                    </ul>
-                </div>
+                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-dashboard icon-before"></i><span class="btn">Make Appointment</span></a>
             </li>
-
 
             <li class="nav-item">
 

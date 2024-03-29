@@ -15,13 +15,11 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="Authent-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_login.html')}}"
+                        <li><a  href="/patient/booking"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Booking</span></a></li>
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_logout.html')}}"
+                        <li><a  href="/patient/reception"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Reception</span></a></li>
@@ -36,17 +34,17 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="pages-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/profile.html')}}"
+                        <li><a href="/appointment/pending"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Pending</span></a></li>
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authen_login.html')}}"
+                        <li><a 
+                            href="/appointment/cancelled"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Cancelled</span></a></li>
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/login2.html')}}"
+                        <li><a 
+                            href="/appointment/successful"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Successful</span></a></li>
@@ -61,13 +59,13 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="consultation-room" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_login.html')}}"
+                        <li><a 
+                            href="/consultationroom/general"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> General Doctor</span></a></li>
-                        <li><a target="_blank"
-                            href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_logout.html')}}"
+                        <li><a 
+                            href="/consultationroom/special"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Special Doctor</span></a></li>
@@ -82,15 +80,15 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="base-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
+                        <li><a href="/laboratory/stock"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Stock</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
+                        <li><a href="/laboratory/stock_usage"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Usage</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_typo.html')}}"
+                        <li><a href="/laboratory/results"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Results </span></a></li>
@@ -105,11 +103,11 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="treatment" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
+                        <li><a href="/treatment/admitted"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> In Patient</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
+                        <li><a href="/treatment/outpatient"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Out Patient</span></a></li>
@@ -124,11 +122,11 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="theatre" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
+                        <li><a href="/theatre/minor"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Minor</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
+                        <li><a href="/theatre/major"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Complicated</span></a></li>
@@ -143,14 +141,35 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="ward" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
+                        <li><a href="/ward/admitted"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> On treatment</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
+                        <li><a href="/ward/discharged"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Discharged</span></a></li>
+                            class="fa fa-circle-o"></i> Discharged</span></a>
+                        </li>
+                        <li><a href="/ward/referred"
+                            class="link-dark rounded w-100"><span><i
+                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
+                            class="fa fa-circle-o"></i> Referred</span></a>
+                        </li>
+                        <li><a href="/ward/died"
+                            class="link-dark rounded w-100"><span><i
+                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
+                            class="fa fa-circle-o"></i> Died</span></a>
+                        </li>
+                        <li><a href="/ward/escaped"
+                            class="link-dark rounded w-100"><span><i
+                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
+                            class="fa fa-circle-o"></i> Escaped</span></a>
+                        </li>
+                        <li><a href="/ward/taken"
+                            class="link-dark rounded w-100"><span><i
+                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
+                            class="fa fa-circle-o"></i> Taken</span></a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -162,11 +181,11 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="accounts" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/ecommerce_prod.html')}}"
+                        <li><a href="/accounts/stock"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Stock</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/ecommerce_prod_details.html')}}"
+                        <li><a href="/accounts/payment"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
                             class="fa fa-circle-o"></i> Payments</span></a></li>
@@ -181,14 +200,21 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="pharmacy" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
+                        <li><a href="/drugs/stock"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Stock</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
+                            class="fa fa-circle-o"></i> Stock</span></a>
+                        </li>
+                        <li><a href="/drugs/nurse"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Used</span></a></li>
+                            class="fa fa-circle-o"></i> Nurse</span></a>
+                        </li>
+                        <li><a href="/drugs/patient"
+                            class="link-dark rounded w-100"><span><i
+                            style="font-size:8px; vertical-align:middle; margin-right:10px;"
+                            class="fa fa-circle-o"></i> Patient</span></a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -200,16 +226,21 @@
                     class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="account-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/project_list.html')}}"
+                        <li><a href="/staff/"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Doctors</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/project_list_detail.html')}}"
+                            class="fa fa-circle-o"></i> Staff</span></a></li>
+                        <li><a href="/staff/support_staff"
                             class="link-dark rounded w-100"><span><i
                             style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                            class="fa fa-circle-o"></i> Other Workers</span></a></li>
+                            class="fa fa-circle-o"></i> Support Staff</span></a></li>
                     </ul>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a href="/mortuary/"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-dashboard icon-before"></i><span class="btn">Mortuary</span></a>
             </li>
             <li class="nav-item">
                 <a href="javascript:void(0);" class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m" data-bs-toggle="collapse" data-bs-target="#Forms-collapse" aria-expanded="false"><i class="fa fa-file icon-before"></i><span class="btn">Set up</span><i class="fa fa-chevron-right"></i></a>

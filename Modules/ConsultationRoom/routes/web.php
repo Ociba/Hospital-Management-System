@@ -14,6 +14,7 @@ use Modules\ConsultationRoom\App\Http\Controllers\ConsultationRoomController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('consultationroom', ConsultationRoomController::class)->names('consultationroom');
+Route::group(['prefix' => 'consultationroom', 'middleware' => ['auth']], function () {
+    Route::get('/general', 'ConsultationRoomController@general')->name('Doctor');
+    Route::get('/special', 'ConsultationRoomController@special')->name('Special Doctor');
 });

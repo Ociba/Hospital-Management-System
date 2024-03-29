@@ -12,9 +12,17 @@ class LaboratoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function stock()
     {
-        return view('laboratory::index');
+        return view('laboratory::stock');
+    }
+    public function patientResults()
+    {
+        return view('laboratory::patient_result');
+    }
+    public function stockUsage()
+    {
+        return view('laboratory::stock_usage');
     }
 
     /**

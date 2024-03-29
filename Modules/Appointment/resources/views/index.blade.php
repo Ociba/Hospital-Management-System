@@ -1,7 +1,7 @@
-@extends('appointment::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('appointment.name') !!}</p>
+@livewire('admin.patient.appointment')
+
 @endsection

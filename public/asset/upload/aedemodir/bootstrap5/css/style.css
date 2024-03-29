@@ -228,3 +228,7 @@ body {
     background: #37485e; 
   }
   /*****************************/
+  .btn-button {
+    background:#3c5370;
+    color:#fff;
+  }

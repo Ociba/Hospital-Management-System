@@ -14,6 +14,6 @@ use Modules\Treatment\App\Http\Controllers\TreatmentController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('treatment', TreatmentController::class)->names('treatment');
+Route::group(['prefix' => 'treatment', 'middleware' => ['auth']], function () {
+    Route::get('/{status}', 'TreatmentController@index')->name('Treatment');
 });

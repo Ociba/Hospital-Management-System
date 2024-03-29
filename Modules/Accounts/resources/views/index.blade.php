@@ -1,7 +1,7 @@
-@extends('accounts::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('accounts.name') !!}</p>
+@livewire('admin.accounts.stock')
+
 @endsection

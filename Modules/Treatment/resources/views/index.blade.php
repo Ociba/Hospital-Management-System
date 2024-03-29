@@ -1,7 +1,7 @@
-@extends('treatment::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('treatment.name') !!}</p>
+@livewire('admin.staff.treatment')
+
 @endsection

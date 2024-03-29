@@ -14,6 +14,8 @@ use Modules\Drugs\App\Http\Controllers\DrugsController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('drugs', DrugsController::class)->names('drugs');
+Route::group(['prefix' => 'drugs', 'middleware' => ['auth']], function () {
+    Route::get('/stock', 'DrugsController@index')->name('Pharmacy');
+    Route::get('/nurse', 'DrugsController@nurseRecord')->name('Nurse Records');
+    Route::get('/patient', 'DrugsController@patientRecord')->name('Patient Record');
 });

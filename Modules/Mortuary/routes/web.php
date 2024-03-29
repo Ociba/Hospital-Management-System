@@ -14,6 +14,6 @@ use Modules\Mortuary\App\Http\Controllers\MortuaryController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('mortuary', MortuaryController::class)->names('mortuary');
+Route::group(['prefix' => 'mortuary', 'middleware' => ['auth']], function () {
+    Route::get('/', 'MortuaryController@index')->name('Mortuary Records');
 });

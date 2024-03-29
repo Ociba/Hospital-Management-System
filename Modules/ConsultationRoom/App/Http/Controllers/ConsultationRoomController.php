@@ -12,9 +12,13 @@ class ConsultationRoomController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function general()
     {
-        return view('consultationroom::index');
+        return view('consultationroom::general');
+    }
+    public function special()
+    {
+        return view('consultationroom::special');
     }
 
     /**

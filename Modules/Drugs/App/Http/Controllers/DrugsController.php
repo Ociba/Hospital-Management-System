@@ -16,7 +16,12 @@ class DrugsController extends Controller
     {
         return view('drugs::index');
     }
-
+    public function nurseRecord(){
+        return view('drugs::nurse');
+    }
+    public function patientRecord(){
+        return view('drugs::patient');
+    }
     /**
      * Show the form for creating a new resource.
      */

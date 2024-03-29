@@ -16,7 +16,9 @@ class StaffController extends Controller
     {
         return view('staff::index');
     }
-
+    public function supportStaff(){
+        return view('staff::support_staff');
+    }
     /**
      * Show the form for creating a new resource.
      */

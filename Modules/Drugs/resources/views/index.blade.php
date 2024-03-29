@@ -1,7 +1,7 @@
-@extends('drugs::layouts.master')
+@extends('dashboards.admin_dashboard')
 
 @section('content')
-    <h1>Hello World</h1>
 
-    <p>Module: {!! config('drugs.name') !!}</p>
+@livewire('admin.pharmacy.stock')
+
 @endsection

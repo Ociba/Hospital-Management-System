@@ -12,8 +12,8 @@ use Modules\Theatre\App\Http\Controllers\TheatreController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
 
-Route::group([], function () {
-    Route::resource('theatre', TheatreController::class)->names('theatre');
+Route::group(['prefix' => 'theatre', 'middleware' => ['auth']], function () {
+    Route::get('/{surgery_category}', 'TheatreController@index')->name('Theatre');
 });
