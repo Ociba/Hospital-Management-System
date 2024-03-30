@@ -4,13 +4,13 @@
 
         <ul class="nav flex-column mb-2 list-unstyled ps-0">
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/staff/dashboard"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop active_tab"><i
                         class="fa fa-dashboard icon-before"></i><span class="btn">Dashboard</span></a>
 
             </li>
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/index.html')}}"
+                <a href="/staff/profile"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-dashboard icon-before"></i><span class="btn">Profile</span></a>
 
@@ -20,18 +20,19 @@
                 <a href="javascript:void(0);"
                     class="btn btn-toggle align-items-center rounded collapsed  w-100 tag_m"
                     data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false"><i
-                        class="fa fa-shopping-cart icon-before"></i><span class="btn">Accounts</span><i
+                        class="fa fa-shopping-cart icon-before"></i><span class="btn">Treatment</span><i
                         class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="orders-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/ecommerce_prod.html')}}"
+                        <li><a href="/staff/stock"
                                 class="link-dark rounded w-100"><span><i
                                         style="font-size:8px; vertical-align:middle; margin-right:10px;"
                                         class="fa fa-circle-o"></i> Stock</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/ecommerce_prod_details.html')}}"
+                        <li><a href="/staff/treatment"
                                 class="link-dark rounded w-100"><span><i
                                         style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Payments</span></a></li>
+                                        class="fa fa-circle-o"></i> Treatment</span></a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -44,88 +45,34 @@
                         class="fa fa-chevron-right"></i></a>
                 <div class="collapse" id="Authent-collapse" style="">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_login.html')}}"
+                        <li><a   href="/staff/todays_patients"
                                 class="link-dark rounded w-100"><span><i
                                         style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Todays' Patients</span></a></li>
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authent_logout.html')}}"
+                                        class="fa fa-circle-o"></i> Todays' Patients</span></a>
+                                </li>
+                        <li><a  href="/staff/all_patient"
                                 class="link-dark rounded w-100"><span><i
                                         style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> All Patients</span></a></li>
+                                        class="fa fa-circle-o"></i> All Patients</span></a>
+                                </li>
                     </ul>
                 </div>
             </li>
-
             <li class="nav-item">
-
-                <a href="javascript:void(0);"
-                    class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m"
-                    data-bs-toggle="collapse" data-bs-target="#pages-collapse" aria-expanded="false"><i
-                        class="fa fa-copy icon-before"></i><span class="btn">Appointments</span><i
-                        class="fa fa-chevron-right"></i></a>
-                <div class="collapse" id="pages-collapse" style="">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/profile.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Pending</span></a></li>
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/authen_login.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Cancelled</span></a></li>
-                        <li><a target="_blank"
-                                href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/login2.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Successful</span></a></li>
-
-                    </ul>
-                </div>
-            </li>
-
-
-            <li class="nav-item">
-
-                <a href="javascript:void(0);"
-                    class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m"
-                    data-bs-toggle="collapse" data-bs-target="#base-collapse" aria-expanded="false"><i
-                        class="fa fa-diamond icon-before"></i><span class="btn">Laboratory</span><i
-                        class="fa fa-chevron-right"></i></a>
-                <div class="collapse" id="base-collapse" style="">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_accordions.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Stock</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_alerts.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Usage</span></a></li>
-                        <li><a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/base_typo.html')}}"
-                                class="link-dark rounded w-100"><span><i
-                                        style="font-size:8px; vertical-align:middle; margin-right:10px;"
-                                        class="fa fa-circle-o"></i> Results </span></a></li>
-                    </ul>
-                </div>
+                <a href="/staff/results"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-comment-o icon-before"></i><span class="btn">Results</span></a>
             </li>
 
             <li class="nav-item">
-                <a href="{{ asset('asset/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/chat.html')}}"
+                <a href="/staff/prescription"
                     class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
                         class="fa fa-comment-o icon-before"></i><span class="btn">Prescription</span></a>
             </li>
             <li class="nav-item">
-            <a href="javascript:void(0);" class="btn btn-toggle align-items-center rounded collapsed w-100 tag_m" data-bs-toggle="collapse" data-bs-target="#Forms-collapse" aria-expanded="false"><i class="fa fa-file icon-before"></i><span class="btn">Set up</span><i class="fa fa-chevron-right"></i></a>
-            <div class="collapse" id="Forms-collapse" style="">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_basic.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> User Type</span></a></li>
-                <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_validation.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Department</span></a></li>
-                <li><a href="https://www.templateonweb.com/upload/aedemodir/950a4152c2b4aa3ad78bdd6b366cc179/form_wizard.html" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Service</span></a></li>
-                </ul>
-            </div>
+                <a href="/staff/change_password"
+                    class="btn btn-toggle align-items-center rounded w-100 tag_m  no_drop"><i
+                        class="fa fa-lock icon-before"></i><span class="btn">Change Password</span></a>
             </li>
         </ul>
 

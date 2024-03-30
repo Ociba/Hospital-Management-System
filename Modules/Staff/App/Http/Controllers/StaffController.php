@@ -19,6 +19,37 @@ class StaffController extends Controller
     public function supportStaff(){
         return view('staff::support_staff');
     }
+    public function dashboard(){
+        return view('staff::dashboard');
+    }
+    public function profile(){
+        return view('staff::profile');
+    }
+    public function stock(){
+        return view('staff::stock');
+    }
+    public function treatment(){
+        return view('staff::treatment');
+    }
+    public function todaysPatient(){
+        return view('staff::today_patients');
+    } 
+    public function allPatients(){
+        return view('staff::patient');
+    }
+
+    public function results(){
+        return view('staff::results');
+    }
+
+    public function prescription(){
+        return view('staff::prescription');
+    }
+
+    public function changePassword(){
+        return view('staff::change_password');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

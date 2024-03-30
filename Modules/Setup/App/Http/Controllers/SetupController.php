@@ -73,8 +73,11 @@ class SetupController extends Controller
     }
     public function department(){
         return view('setup::department');
-    }
+    } 
     public function service(){
         return view('setup::service');
+    }
+    public function changePassword(){
+        return view('setup::change_password');
     }
 }

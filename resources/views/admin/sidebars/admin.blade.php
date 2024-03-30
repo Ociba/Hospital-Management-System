@@ -249,6 +249,7 @@
                         <li><a href="/setup/user_type" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> User Type</span></a></li>
                         <li><a href="/setup/department" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Department</span></a></li>
                         <li><a href="/setup/service" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Service</span></a></li>
+                        <li><a href="/setup/change_password" class="link-dark rounded w-100"><span><i style="font-size:8px; vertical-align:middle; margin-right:10px;" class="fa fa-circle-o"></i> Change Password</span></a></li>
                     </ul>
                 </div>
             </li>
