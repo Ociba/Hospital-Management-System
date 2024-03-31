@@ -29,28 +29,28 @@
         <table class="table table-responsive table-hover  p-0 m-0">
         <thead>
             <tr>
-                <th scope="col" wire:click="sortBy('users.id')" style="cursor: pointer;">#
-                    @include('partials._sort-icon',['field'=>'users.id'])
+                <th scope="col" wire:click="sortBy('departments.id')" style="cursor: pointer;">#
+                    @include('partials._sort-icon',['field'=>'departments.id'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.name')" style="cursor: pointer;">Name
-                    @include('partials._sort-icon',['field'=>'users.name'])
+                <th scope="col" wire:click="sortBy('departments.department')" style="cursor: pointer;">Department
+                    @include('partials._sort-icon',['field'=>'departments.department'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.email')" style="cursor: pointer;">Email
-                    @include('partials._sort-icon',['field'=>'users.email'])
+                <th scope="col" wire:click="sortBy('departments.description')" style="cursor: pointer;">Description
+                    @include('partials._sort-icon',['field'=>'departments.description'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.user_type')" style="cursor: pointer;">User Type
-                    @include('partials._sort-icon',['field'=>'users.user_type'])
+                <th scope="col" wire:click="sortBy('departments.created_by')" style="cursor: pointer;">Created_by
+                    @include('partials._sort-icon',['field'=>'departments.created_by'])
                 </th>
                 <th scope="col">Option</th>
             </tr>
         </thead>
             <tbody>
-                @foreach($users as $i =>$user)
+                @foreach($departments as $i =>$department)
                 <tr>
                     <td>{{$i + 1}}</td>
-                    <td><h6 class="font_12">{{$user->name}}</h6> </td>
-                    <td> <h6 class="font_12 p-1 mb-0">{{$user->email}}</h6> </td>
-                    <td> <h6 class="font_12 mb-0">{{$user->user_type}}</h6> </td>
+                    <td><h6 class="font_12">{{$department->department}}</h6> </td>
+                    <td> <h6 class="font_12 p-1 mb-0">{{$department->description}}</h6> </td>
+                    <td> <h6 class="font_12 mb-0">{{$department->creator->name}}</h6> </td>
                     <td>
                         <h6 data-bs-toggle="tooltip" data-bs-placement="left"
                             data-bs-original-title="Edit" class="d-inline-block mb-0"><a
@@ -67,15 +67,15 @@
     </div>
     <div class="row">
         <div class="col-sm-6 mb-2">
-            Showing {{$users->firstItem()}} to {{$users->lastItem()}} out of {{$users->total()}} items
+            Showing {{$departments->firstItem()}} to {{$departments->lastItem()}} out of {{$departments->total()}} items
         </div>
         <div class="text-right col-sm-6 mb-2">
-            {{$users->links()}}
+            {{$departments->links()}}
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 text-end">
-            <button  class="btn btn-sm btn-button mb-2" onclick="Livewire.emit('openModal', 'admin.setup.add-user-type')"><i class="fa fa-plus"></i> Department</button>
+            <button  class="btn btn-sm btn-bg mb-2" onclick="Livewire.dispatch('openModal', { component: 'admin.setup.add-department' })"><i class="fa fa-plus"></i> Department</button>
         </div>
     </div>
 </div>

@@ -75,7 +75,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 text-end">
-            <button  class="btn btn-sm btn-button mb-2" onclick="Livewire.emit('openModal', 'admin.setup.add-user-type')"><i class="fa fa-plus"></i> Item Used</button>
+            <button  class="btn btn-sm btn-button mb-2" onclick="Livewire.dispatch('openModal', { component: 'admin.setup.add-user-type' })"><i class="fa fa-plus"></i> Item Used</button>
         </div>
     </div>
 </div>

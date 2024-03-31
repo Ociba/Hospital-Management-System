@@ -1,42 +1,42 @@
 <?php
 
-namespace Modules\Accounts\App\Services;
+namespace Modules\Admin\Services;
 
 use Illuminate\Support\Facades\Log;
 use Modules\Admin\App\Models\Usertype;
 
 class UserTypeService
 {
-    public static function createPayment($fields)
+    public static function createType($fields)
     {
         try {
-            return Usertype::createPayment($fields);
+            return Usertype::createUsertype($fields);
         } catch (\Exception $e) {
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-    public static function getPayment($search, $sortBy, $sortDirection, $perPage)
+    public static function getType($search, $sortBy, $sortDirection, $perPage)
     {
         try {
-            return Usertype::getPayment($search, $sortBy, $sortDirection, $perPage);
-        } catch (\Exception $e) {
-            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
-        }
-    }
-
-    public static function getParticularPayment($paymentId): JsonResponse
-    {
-        try {
-            return response()->json(['data' => Usertype::getParticularPayment($paymentId)]);
+            return Usertype::getUserType($search, $sortBy, $sortDirection, $perPage);
         } catch (\Exception $e) {
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
 
-    public static function deletePayment($paymentId): JsonResponse
+    public static function getParticularType($typeId): JsonResponse
     {
         try {
-            Usertype::deletePayment($paymentId);
+            return response()->json(['data' => Usertype::getParticularPayment($typeId)]);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
+
+    public static function deleteType($typeId): JsonResponse
+    {
+        try {
+            Usertype::deleteUserType($typeId);
 
             return response()->json(['success' => 'operation successful']);
         } catch (\Exception $e) {

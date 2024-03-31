@@ -5,6 +5,7 @@ namespace Modules\Department\App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Department\Database\factories\DepartmentFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Ramsey\Uuid\Uuid;
 use App\Models\User;
 
@@ -34,13 +35,12 @@ class Department extends Model
         return $query->where('department', 'like', '%'.$val.'%');
     }
 
-    protected static function createDepartment(){
+    protected static function createDepartment($fields){
         self::create([
             'id' => Uuid::uuid4(),
             'department' => $fields['department'],
             'description' => $fields['description'],
             'created_by' => $fields['created_by'],
-            'updated_by' => $fields['updated_by'],
         ]);
     }
     public static function getDepartment($search, $sortBy, $sortDirection, $perPage){

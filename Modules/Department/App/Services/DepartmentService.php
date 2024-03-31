@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\App\Services;
+namespace Modules\Department\App\Services;
 
 
 use Illuminate\Support\Facades\Log;

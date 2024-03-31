@@ -38,14 +38,14 @@ class Usertype extends Model
         self::create([
             'id' => Uuid::uuid4(),
             'type' => $fields['type'],
-            'craeted_by' => $fields['craeted_by'],
+            'created_by' => $fields['created_by'],
         ]);
     }
     public static function getUserType($search,$sortBy, $sortDirection, $perPage){
          // Define a default column and direction in case $sortBy is empty.
         $sortBy = $sortBy ?: 'type';
         $sortDirection = $sortDirection ?: 'desc';
-        return self::with('creator')->search($search)
+        return self::search($search)
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
     }
