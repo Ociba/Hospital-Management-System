@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\App\Services;
+namespace Modules\Patient\App\Services;
 
 
 use Illuminate\Support\Facades\Log;
@@ -15,23 +15,29 @@ class PatientService
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-    public static function createLoggedPatient($fields)
+    public static function createBooking($fields)
     {
         try {
-            return Patient::createLoggedinPatient($fields);
+            return Patient::createBooking($fields);
         } catch (\Exception $e) {
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-    public static function getPatient($search, $sortBy, $sortDirection, $perPage)
+    public static function getPatient($category,$search, $sortBy, $sortDirection, $perPage)
     {
         try {
-            return Patient::getPatient($search, $sortBy, $sortDirection, $perPage);
+            return Patient::getPatient($category,$search, $sortBy, $sortDirection, $perPage);
         } catch (\Exception $e) {
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-
+    public static function getProfile(){
+        try {
+            return Patient::getProfile();
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
     public static function getParticularPatient($PatientId): JsonResponse
     {
         try {

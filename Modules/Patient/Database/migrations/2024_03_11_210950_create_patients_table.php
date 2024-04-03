@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('other_names');
+            $table->string('other_names')->nullable();
             $table->uuid('service_id');
             $table->string('gender');
             $table->string('date_of_birth');

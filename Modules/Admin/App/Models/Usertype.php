@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Admin\Database\factories\UsertypeFactory;
 use Ramsey\Uuid\Uuid;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Usertype extends Model
 {

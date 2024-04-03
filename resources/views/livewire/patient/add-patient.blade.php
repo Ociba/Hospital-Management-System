@@ -1,17 +1,8 @@
 <div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
-    <div class="row">
-        <div class="col-md-12 text-center">
-        @if (session()->has('msg'))
-            <div class="alert alert-success"  style="background-color:#ffff; color:blue;" role="alert">
-                {{ session('msg') }}
-            </div>
-        @endif
-        </div>
-    </div>
+    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     <div class="card">
         <div class="card-body">
-            <form wire:submit.prevent="addPatient">
+            <form wire:submit.prevent="addClient">
                 <div class="row g-2">
                     <div class="mb-3 col-md-6">
                         <label for="inputFirstName" class="form-label">First Name</label>
@@ -48,9 +39,9 @@
                         @error('service_id') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label for="ConsultationFee" class="form-label">Consultation Fee</label>
-                        <input type="number" wire:model="consultation_fee" class="form-control" id="ConsultationFee" value="5000" readonly>
-                        @error('consultation_fee') <span class="text-danger">{{ $message }}</span> @enderror
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" wire:model="email" class="form-control" id="ConsultationFee" value="5000">
+                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="row g-2">
@@ -112,7 +103,11 @@
                     </div>
                     <div class="mb-3 col-md-6">
                         <label for="inputCategory" class="form-label">Category</label>
-                        <input type="text"  wire:model="category" class="form-control" id="category" value="booking" readonly>
+                        <select id="category" class="form-select" wire:model="category">
+                            <option>Choose</option>
+                            <option value="booking">Booking</option>
+                            <option value="normal">Normal</option>
+                        </select>
                         @error('category') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
@@ -153,24 +148,19 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="mb-3 col-md-6">
-                        <label for="inputDate" class="form-label">Date</label>
-                        <input type="date" wire:model="date" class="form-control" id="Date">
-                        @error('date') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-                    <div class="mb-3 col-md-6">
-                        <label for="inputTime" class="form-label">Time</label>
-                        <input type="time"  wire:model="time" class="form-control" id="Time">
-                        @error('time') <span class="text-danger">{{ $message }}</span> @enderror
+                    <div class="mb-3 col-md-12">
+                        <label for="inputPassword" class="form-label">Password</label>
+                        <input type="password" wire:model="password" class="form-control" id="Date">
+                        @error('password') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <button type="submit" class="btn btn-bg btn-sm">
-                            <span wire:loading wire:target="addPatient">
+                            <span wire:loading wire:target="addClient">
                                 <i class="fa fa-spinner fa-spin"></i> 
                             </span>
-                            <span wire:loading.remove wire:target="addPatient">Submit</span>
+                            <span wire:loading.remove wire:target="addClient">Submit</span>
                         </button>
                     </div>
                 </div>

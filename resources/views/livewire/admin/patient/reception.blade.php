@@ -29,28 +29,36 @@
         <table class="table table-responsive table-hover  p-0 m-0">
         <thead>
             <tr>
-                <th scope="col" wire:click="sortBy('users.id')" style="cursor: pointer;">#
-                    @include('partials._sort-icon',['field'=>'users.id'])
+                <th scope="col" wire:click="sortBy('patients.id')" style="cursor: pointer;">#
+                    @include('partials._sort-icon',['field'=>'patients.id'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.name')" style="cursor: pointer;">Name
-                    @include('partials._sort-icon',['field'=>'users.name'])
+                <th scope="col" wire:click="sortBy('patients.first_name')" style="cursor: pointer;">Name
+                    @include('partials._sort-icon',['field'=>'patients.first_name'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.email')" style="cursor: pointer;">Email
-                    @include('partials._sort-icon',['field'=>'users.email'])
+                <th scope="col" wire:click="sortBy('patients.service_name')" style="cursor: pointer;">Service
+                    @include('partials._sort-icon',['field'=>'patients.service_name'])
                 </th>
-                <th scope="col" wire:click="sortBy('users.user_type')" style="cursor: pointer;">User Type
-                    @include('partials._sort-icon',['field'=>'users.user_type'])
+                <th scope="col" wire:click="sortBy('patients.phone_number')" style="cursor: pointer;">Phone Number
+                    @include('partials._sort-icon',['field'=>'patients.phone_number'])
+                </th>
+                <th scope="col" wire:click="sortBy('patients.appintment_status')" style="cursor: pointer;">Status
+                    @include('partials._sort-icon',['field'=>'patients.appintment_status'])
+                </th>
+                <th scope="col" wire:click="sortBy('patients.image')" style="cursor: pointer;">Photo
+                    @include('partials._sort-icon',['field'=>'patients.image'])
                 </th>
                 <th scope="col">Option</th>
             </tr>
         </thead>
             <tbody>
-                @foreach($users as $i =>$user)
+                @foreach($patients as $i =>$patient)
                 <tr>
                     <td>{{$i + 1}}</td>
-                    <td><h6 class="font_12">{{$user->name}}</h6> </td>
-                    <td> <h6 class="font_12 p-1 mb-0">{{$user->email}}</h6> </td>
-                    <td> <h6 class="font_12 mb-0">{{$user->user_type}}</h6> </td>
+                    <td><h6 class="font_12">{{$patient->last_name}} {{$patient->first_name}} {{$patient->other_names}}</h6> </td>
+                    <td> <h6 class="font_12 p-1 mb-0">{{$patient->service->service_name}}</h6> </td>
+                    <td> <h6 class="font_12 mb-0">{{$patient->phone_number}}</h6> </td> 
+                    <td> <h6 class="font_12 bg_2 p-1 mb-0">{{$patient->appointment_status}}</h6> </td>
+                    <td> <h6 class="font_12 mb-0"><img src="{{ asset('storage/patient/image/'.$patient->image)}}" style="width:40px; height:40px"></h6> </td>
                     <td>
                         <h6 data-bs-toggle="tooltip" data-bs-placement="left"
                             data-bs-original-title="Edit" class="d-inline-block mb-0"><a
@@ -67,15 +75,15 @@
     </div>
     <div class="row">
         <div class="col-sm-6 mb-2">
-            Showing {{$users->firstItem()}} to {{$users->lastItem()}} out of {{$users->total()}} items
+            Showing {{$patients->firstItem()}} to {{$patients->lastItem()}} out of {{$patients->total()}} items
         </div>
         <div class="text-right col-sm-6 mb-2">
-            {{$users->links()}}
+            {{$patients->links()}}
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 text-end">
-            <button  class="btn btn-sm btn-button mb-2" onclick="Livewire.dispatch('openModal', { component: 'admin.setup.add-user-type' })"><i class="fa fa-plus"></i> Patient</button>
+            <button  class="btn btn-sm btn-bg mb-2" onclick="Livewire.dispatch('openModal', { component: 'patient.add-patient' })"><i class="fa fa-plus"></i> Patient</button>
         </div>
     </div>
 </div>

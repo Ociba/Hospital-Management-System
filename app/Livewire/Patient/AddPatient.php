@@ -2,23 +2,23 @@
 
 namespace App\Livewire\Patient;
 
-use Modules\Appointment\Services\AppointmentService;
-use Modules\Admin\Services\HospitalService;
 use Livewire\Component;
 use Session;
 use Livewire\WithFileUploads;
 use App\Traits\saveToPhotoFolder;
+use LivewireUI\Modal\ModalComponent;
+use Modules\Patient\App\Services\PatientService;
+use Modules\Admin\Services\HospitalService;
+use App\Models\User;
 
-class MakeAppointment extends Component
+class AddPatient extends ModalComponent
 {
     use saveToPhotoFolder,WithFileUploads;
 
-    public $patient_id;
     public $first_name;
     public $last_name;
     public $other_names;
     public $date_of_birth;
-    public $consultation_fee;
     public $service_id;
     public $gender;
     public $national_id_number;
@@ -34,19 +34,19 @@ class MakeAppointment extends Component
     public $next_of_kin_contact;
     public $next_of_kin_relationship;
     public $image;
-    public $date;
-    public $time;
+    public $name;
+    public $email;
+    public $user_type;
+    public $password;
     public $created_by;
     public $search =null; public $sortBy =null; public $sortDirection =null; public $perPage=null;
 
     // Validate
     protected $rules = [
-        'patient_id' => '',
         'first_name' => 'required',
         'last_name' => 'required',
         'other_names' => '',
         'date_of_birth' => 'required',
-        'consultation_fee' => 'required',
         'service_id' => 'required',
         'gender' => 'required',
         'national_id_number' => 'required',
@@ -62,8 +62,9 @@ class MakeAppointment extends Component
         'next_of_kin_contact' => 'required',
         'next_of_kin_relationship' => 'required',
         'image' => 'required|file|max:10240',
-        'date' => 'required',
-        'time' => 'required',
+        'email' => 'required',
+        'user_type' => '',
+        'password' => 'required',
         'created_by' => '',
     ];
 
@@ -72,7 +73,6 @@ class MakeAppointment extends Component
         'first_name.required' => 'First Name is required',
         'last_name.required' => 'Last Name is required',
         'date_of_birth.required' => 'Date of Birth is required',
-        'consultation_fee.required' => 'Consultation Fee is required',
         'service_id.required' => 'Service You want is required',
         'gender.required' => 'Gender is required',
         'national_id_number.required' => 'NIN is required',
@@ -90,23 +90,21 @@ class MakeAppointment extends Component
         'image.required' => 'Photo is required',
         'image.file' => 'Please upload a file',
         'image.max' => 'The file size must be less than 10MB',
-        'date.required' => 'Date of Appointment is required',
-        'time.required' => 'Time of Appointment is required',
+        'email.required' => 'Email is required',
+        'password.required' => 'Password is required',
     ];
 
-    public function addPatient()
+    public function addClient()
     {
         $this->validate();
         // 'Student_photos/'.$this->profile_photo_path
 
         $savedFileName = $this->saveToPhotoFolder('image', $this->image);
         $fields = [
-            'patient_id' => $this->patient_id,
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
             'other_names' => $this->other_names,
             'date_of_birth' => $this->date_of_birth,
-            'consultation_fee' => $this->consultation_fee,
             'service_id' => $this->service_id,
             'gender' => $this->gender,
             'national_id_number' => $this->national_id_number,
@@ -122,25 +120,24 @@ class MakeAppointment extends Component
             'next_of_kin_contact' => $this->next_of_kin_contact,
             'next_of_kin_relationship' => $this->next_of_kin_relationship,
             'image' => $savedFileName,
-            'date' => $this->date,
-            'time' => $this->time,
-            'created_by' => auth()->user()->id,
+            'email' => $this->email,
+            'user_type' => $this->user_type,
+            'password' => $this->password,
+            'created_by' => User::where('email',$this->email)->value('id'),
+            'updated_by' =>auth()->user()->id,
         ];
+        // dd($fields);
         // Call the service create service method
-        AppointmentService::createSelfAppointment($fields);
+        User::createUserAccount($this->first_name, $this->email, $this->user_type, $this->password);
+        PatientService::createBooking($fields);
         Session::flash('msg', 'Operation Succesful');
-        return redirect()->to('/patient/dashboard');
+        $this->dispatch('Service', 'refreshComponent');
+        $this->closeModal();
     }
     public function render()
     {
-        return view('livewire.patient.make-appointment',[
+        return view('livewire.patient.add-patient',[
             'services' =>$this->getServives()
-        ]);
-    }
-    public function mount(){
-        $this->fill ([
-            'consultation_fee' =>'5000',
-            'category' =>'booking'
         ]);
     }
     private function getServives(){

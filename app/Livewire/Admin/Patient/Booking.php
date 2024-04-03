@@ -5,7 +5,7 @@ namespace App\Livewire\Admin\Patient;
 use App\Traits\WithSorting;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\User;
+use Modules\Patient\App\Services\PatientService;
 
 class Booking extends Component
 {
@@ -22,7 +22,7 @@ class Booking extends Component
     public function render()
     {
         return view('livewire.admin.patient.booking',[
-            'users' =>User::getUsers($this->search, $this->sortBy, $this->sortDirection, $this->perPage)
+            'patients' =>PatientService::getPatient('booking',$this->search, $this->sortBy, $this->sortDirection, $this->perPage)
         ]);
     }
 }

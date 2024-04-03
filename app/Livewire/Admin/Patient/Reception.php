@@ -5,7 +5,7 @@ namespace App\Livewire\Admin\Patient;
 use App\Traits\WithSorting;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\User;
+use Modules\Patient\App\Services\PatientService;
 
 class Reception extends Component
 {
@@ -22,7 +22,7 @@ class Reception extends Component
     public function render()
     {
         return view('livewire.admin.patient.reception',[
-            'users' =>User::getUsers($this->search, $this->sortBy, $this->sortDirection, $this->perPage)
+            'patients' =>PatientService::getPatient('normal',$this->search, $this->sortBy, $this->sortDirection, $this->perPage)
         ]);
     }
 }

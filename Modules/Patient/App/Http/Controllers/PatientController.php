@@ -25,7 +25,9 @@ class PatientController extends Controller
     {
         return view('patient::reception');
     } 
-
+    public function bookingForPatient($patient_id){
+        return view('patient::booking_for_patient', compact('patient_id'));
+    }
     /**
      * Show the form for creating a new resource.
      */

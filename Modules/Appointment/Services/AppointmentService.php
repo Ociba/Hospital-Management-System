@@ -15,15 +15,37 @@ class AppointmentService
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-    public static function getAppointment($search, $sortBy, $sortDirection, $perPage)
+    public static function createSelfAppointment($fields)
     {
         try {
-            return Appointment::getAppointment($search, $sortBy, $sortDirection, $perPage);
+            return Appointment::selfAppointment($fields);
         } catch (\Exception $e) {
             return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
         }
     }
-
+    public static function anotherAppointment($fields){
+        try {
+            return Appointment::anotherAppointment($fields);
+        }catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
+    public static function getAppointment($appointment_status,$search, $sortBy, $sortDirection, $perPage)
+    {
+        //dd($appointment_status);
+        try {
+            return Appointment::getAppointment($appointment_status,$search, $sortBy, $sortDirection, $perPage);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
+    public static function getMyAppointment($search, $sortBy, $sortDirection, $perPage){
+        try {
+            return Appointment::getMyAppointment($search, $sortBy, $sortDirection, $perPage);
+        } catch (\Exception $e) {
+            return response()->json(['failed' => 'Operation Failed', 'error' => $e->getMessage()], 500);
+        }
+    }
     public static function getParticularAppointment($AppointmentId): JsonResponse
     {
         try {

@@ -5,7 +5,7 @@ namespace App\Livewire\Admin\Setup;
 use App\Traits\WithSorting;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\User;
+use Modules\Admin\Services\HospitalService;
 
 class Service extends Component
 {
@@ -22,7 +22,7 @@ class Service extends Component
     public function render()
     {
         return view('livewire.admin.setup.service',[
-            'users' =>User::getUsers($this->search, $this->sortBy, $this->sortDirection, $this->perPage)
+            'services' =>HospitalService::getService($this->search, $this->sortBy, $this->sortDirection, $this->perPage)
         ]);
     }
 }

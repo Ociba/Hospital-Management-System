@@ -11,6 +11,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Modules\Admin\App\Models\Service;
 use Ramsey\Uuid\Uuid;
+use Hash;
 
 class User extends Authenticatable
 {
@@ -84,5 +85,15 @@ class User extends Authenticatable
         return self::search($search)
         ->orderBy($sortBy, $sortDirection)
         ->paginate($perPage);
+    }
+    public static function createUserAccount($name, $email, $user_type, $password)
+    {
+        return self::create([
+            'id' => Uuid::uuid4(),
+            'name' => $name,
+            'email' => $email,
+            'user_type' => 'patient',
+            'password' => Hash::make($password),
+        ]);
     }
 }
